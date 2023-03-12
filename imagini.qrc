@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Autentificare_off.png</file>
+        <file>bg.jpg</file>
+        <file>Inregistrare_off.png</file>
+        <file>Inregistrare_on.png</file>
+        <file>Autentificare_on.png</file>
+        <file>Logo.png</file>
+    </qresource>
+</RCC>
