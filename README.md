@@ -1,3 +1,3 @@
-# ATM_MAIL
+# ATMail
 
 To be modified...
