@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Autentificare_off.png</file>
+        <file>bg.jpg</file>
+        <file>Inregistrare_off.png</file>
+        <file>Inregistrare_on.png</file>
+        <file>Autentificare_on.png</file>
+        <file>Logo.png</file>
+        <file>RegisterForm.png</file>
+        <file>ContinuaBtn.png</file>
+        <file>ContinuaBtnOn.png</file>
+        <file>InapoiBtn.png</file>
+        <file>InapoiBtnOn.png</file>
+        <file>Confirma.png</file>
+        <file>Email.png</file>
+        <file>Nume.png</file>
+        <file>Parola.png</file>
+        <file>Prenume.png</file>
+    </qresource>
+</RCC>
