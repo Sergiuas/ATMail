@@ -1,0 +1,28 @@
+﻿  Client.cpp
+E:\atmail\atmailSolution\AppCommon\app_message.h(63,1): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+E:\atmail\atmailSolution\AppClient\Client.cpp(26): message : see reference to function template instantiation 'app::message<T> &app::operator <<<std::chrono::system_clock::time_point>(app::message<T> &,const DataType &)' being compiled
+          with
+          [
+              T=CustomMsgTypes,
+              DataType=std::chrono::system_clock::time_point
+          ]
+E:\atmail\atmailSolution\AppClient\Client.cpp(26): message : see reference to function template instantiation 'app::message<T> &app::operator <<<std::chrono::system_clock::time_point>(app::message<T> &,const DataType &)' being compiled
+          with
+          [
+              T=CustomMsgTypes,
+              DataType=std::chrono::system_clock::time_point
+          ]
+E:\atmail\atmailSolution\AppCommon\app_message.h(86,1): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+E:\atmail\atmailSolution\AppClient\Client.cpp(85): message : see reference to function template instantiation 'app::message<T> &app::operator >><std::chrono::system_clock::time_point>(app::message<T> &,DataType &)' being compiled
+          with
+          [
+              T=CustomMsgTypes,
+              DataType=std::chrono::system_clock::time_point
+          ]
+E:\atmail\atmailSolution\AppClient\Client.cpp(85): message : see reference to function template instantiation 'app::message<T> &app::operator >><std::chrono::system_clock::time_point>(app::message<T> &,DataType &)' being compiled
+          with
+          [
+              T=CustomMsgTypes,
+              DataType=std::chrono::system_clock::time_point
+          ]
+  AppClient.vcxproj -> E:\atmail\atmailSolution\x64\Debug\AppClient.exe
