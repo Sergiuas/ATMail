@@ -25,6 +25,7 @@ private slots:
 
     void on_ContinuaBtn_clicked();
 
+
 private:
     Ui::RegisterWindow *ui;
     QSqlDatabase database;

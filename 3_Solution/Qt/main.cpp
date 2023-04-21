@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 
+
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -10,5 +11,6 @@ int main(int argc, char *argv[])
     w.setWindowIcon(QIcon(":Logo.png"));
     w.setWindowTitle("ATMail");
     w.show();
+
     return a.exec();
 }

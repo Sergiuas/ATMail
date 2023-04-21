@@ -40,11 +40,14 @@
   <widget class="QPushButton" name="ContinuaBtn">
    <property name="geometry">
     <rect>
-     <x>740</x>
+     <x>731</x>
      <y>590</y>
      <width>171</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">#ContinuaBtn {
@@ -66,11 +69,14 @@ border-image: url(:ContinuaBtnOn.png);
   <widget class="QPushButton" name="InapoiBtn">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>497</x>
      <y>590</y>
      <width>171</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">#InapoiBtn {
@@ -430,6 +436,68 @@ background-repeat: none;
     <string>Introduceti parola</string>
    </property>
   </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>530</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>31</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox::indicator:unchecked {
+    image: url(:show.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:hide.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxConfirm">
+   <property name="geometry">
+    <rect>
+     <x>801</x>
+     <y>530</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox::indicator:unchecked {
+    image: url(:show.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:hide.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>ContinuaBtn</zorder>
   <zorder>InapoiBtn</zorder>
   <zorder>NumeLabel</zorder>
@@ -442,6 +510,8 @@ background-repeat: none;
   <zorder>prenumeEdit</zorder>
   <zorder>emailEdit</zorder>
   <zorder>confirmaEdit</zorder>
+  <zorder>checkBoxConfirm</zorder>
+  <zorder>checkBox</zorder>
  </widget>
  <resources/>
  <connections/>

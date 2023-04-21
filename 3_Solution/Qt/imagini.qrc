@@ -16,5 +16,26 @@
         <file>Nume.png</file>
         <file>Parola.png</file>
         <file>Prenume.png</file>
+        <file>hide.png</file>
+        <file>show.png</file>
+        <file>hideWhite.png</file>
+        <file>showWhite.png</file>
+        <file>mail_icon.png</file>
+        <file>inbox.png</file>
+        <file>sent.png</file>
+        <file>star.png</file>
+        <file>trash.png</file>
+        <file>folder_blue.png</file>
+        <file>folder_green.png</file>
+        <file>folder_yellow.png</file>
+        <file>search.png</file>
+        <file>moon.png</file>
+        <file>sun.png</file>
+        <file>inbox_black.png</file>
+        <file>Logo_black.png</file>
+        <file>sent_black.png</file>
+        <file>star_black.png</file>
+        <file>trash_black.png</file>
+        <file>compose.png</file>
     </qresource>
 </RCC>

@@ -1,7 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "mail_interface.h"
 #include "registerwindow.h"
+#include "interface.h"
+#include <fstream>
+
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,6 +12,19 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    connect(ui->checkBox, &QCheckBox::stateChanged, [=](int state){
+        if (state == Qt::Checked) {
+            ui->textEditPassword->setEchoMode(QLineEdit::Normal);
+        } else {
+            ui->textEditPassword->setEchoMode(QLineEdit::Password);
+        }
+    });
+
+//    hide();
+//    Interface *mailInterface=new Interface;
+//    mailInterface->setWindowIcon(QIcon(":Logo.png"));
+//    mailInterface->setWindowTitle("ATMail");
+//    mailInterface->show();
 }
 
 MainWindow::~MainWindow()
@@ -47,13 +63,19 @@ void MainWindow::on_LoginBtn_clicked()
             {
                 QString usernameDB= query.value(1).toString();
                 QString passwordDB= query.value(2).toString();
+                QString LastName= query.value(3).toString();
+                QString FirstName= query.value(4).toString();
 
                 if (usernameDB == username && passwordDB == password)
                 {
-                    QMessageBox::information(this,"Succes", "Am trecut mai departe");
+                    //QMessageBox::information(this,"Succes", "Am trecut mai departe");
                     check=1;
+                    fstream fis("fis.txt",ios::out);
+                    fis<<FirstName.toStdString()<<" "<<LastName.toStdString();
                     hide();
-                    Mail_Interface *mailInterface=new Mail_Interface;
+                    Interface *mailInterface=new Interface;
+                    mailInterface->setWindowIcon(QIcon(":Logo.png"));
+                    mailInterface->setWindowTitle("ATMail");
                     mailInterface->show();
                 }
 
@@ -63,6 +85,7 @@ void MainWindow::on_LoginBtn_clicked()
         if (check==0)
         {
             QMessageBox::information(this,"Eroare","Email sau parola gresita!");
+
         }
 
     }
@@ -70,6 +93,7 @@ void MainWindow::on_LoginBtn_clicked()
     else
     {
          QMessageBox::information(this,"Conexiune esuata!","Baza de date nu este conectata!");
+
     }
 
 }
