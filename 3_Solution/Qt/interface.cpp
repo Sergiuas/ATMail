@@ -3,9 +3,12 @@
 #include "mainwindow.h"
 #include <QFile>
 #include <QTextStream>
+#include <QByteArray>
+#include "composewindow.h"
+
 using namespace std;
 
-Interface::Interface(QWidget *parent) :
+Interface::Interface(QString User, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Interface)
 {
@@ -52,19 +55,19 @@ Interface::Interface(QWidget *parent) :
         }
     });
 
-    QFile inputFile("fis.txt");
-    if (inputFile.open(QIODevice::ReadOnly))
-    {
-       QTextStream in(&inputFile);
-       while (!in.atEnd())
-       {
-          QString Nume = in.readLine();
-          ui->user->setText("blabla");
-       }
-       inputFile.close();
-    }
 
+//    QFile file("fis.txt");
+//    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+//        // Error handling code if the file can't be opened
+//        return;
+//    }
 
+//    // Reading data from the file
+//    QByteArray fileData = file.readAll();
+
+//    // Closing the file when finished
+//    file.close();
+    ui->user->setText(User);
 }
 
 Interface::~Interface()
@@ -89,4 +92,6 @@ void Interface::on_pushButton_8_clicked()
 
 
 }
+
+
 

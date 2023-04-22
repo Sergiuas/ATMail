@@ -587,7 +587,7 @@ QCheckBox::indicator:checked {
 }</string>
    </property>
    <property name="text">
-    <string>Daniel Minulescu</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_8">
@@ -664,6 +664,23 @@ background-repeat: none;
    <property name="text">
     <string>Signed as:</string>
    </property>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>140</y>
+     <width>481</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#dockWidget
+{
+	background-color:white;
+}</string>
+   </property>
+   <widget class="QWidget" name="dockWidgetContents"/>
   </widget>
  </widget>
  <resources/>

@@ -13,7 +13,7 @@ RegisterWindow::RegisterWindow(QWidget *parent) :
             ui->parolaEdit->setEchoMode(QLineEdit::Normal);
         } else {
             ui->parolaEdit->setEchoMode(QLineEdit::Password);
-        }.
+        }
     });
 
     connect(ui->checkBoxConfirm, &QCheckBox::stateChanged, [=](int state){
@@ -121,7 +121,7 @@ void RegisterWindow::on_ContinuaBtn_clicked()
                    {
                        QMessageBox::information(this,"Autentificare reusita!","Datele au fost introduse cu succes");
                        this->hide();
-                       Interface *mailInterface=new Interface;
+                       Interface *mailInterface=new Interface(prenume+" "+nume);
                        mailInterface->setWindowIcon(QIcon(":Logo.png"));
                        mailInterface->setWindowTitle("ATMail");
                        mailInterface->show();

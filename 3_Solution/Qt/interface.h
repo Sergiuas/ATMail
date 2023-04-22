@@ -12,11 +12,12 @@ class Interface : public QDialog
     Q_OBJECT
 
 public:
-    explicit Interface(QWidget *parent = nullptr);
+    explicit Interface(QString User, QWidget *parent = nullptr);
     ~Interface();
 
 private slots:
     void on_pushButton_8_clicked();
+
 
 private:
     Ui::Interface *ui;

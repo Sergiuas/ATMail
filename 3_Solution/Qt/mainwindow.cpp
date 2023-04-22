@@ -20,11 +20,11 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
-//    hide();
-//    Interface *mailInterface=new Interface;
-//    mailInterface->setWindowIcon(QIcon(":Logo.png"));
-//    mailInterface->setWindowTitle("ATMail");
-//    mailInterface->show();
+    hide();
+    Interface *mailInterface=new Interface("test");
+    mailInterface->setWindowIcon(QIcon(":Logo.png"));
+    mailInterface->setWindowTitle("ATMail");
+    mailInterface->show();
 }
 
 MainWindow::~MainWindow()
@@ -72,8 +72,20 @@ void MainWindow::on_LoginBtn_clicked()
                     check=1;
                     fstream fis("fis.txt",ios::out);
                     fis<<FirstName.toStdString()<<" "<<LastName.toStdString();
+                    fis.close();
+                    QFile file("fis.txt");
+                    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                        // Error handling code if the file can't be opened
+                        return;
+                    }
+
+                    // Reading data from the file
+                    QByteArray fileData = file.readAll();
+
+                    // Closing the file when finished
+                    file.close();
                     hide();
-                    Interface *mailInterface=new Interface;
+                    Interface *mailInterface=new Interface(QString::fromUtf8(fileData));
                     mailInterface->setWindowIcon(QIcon(":Logo.png"));
                     mailInterface->setWindowTitle("ATMail");
                     mailInterface->show();

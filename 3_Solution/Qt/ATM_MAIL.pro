@@ -56,4 +56,5 @@ DISTFILES += \
     Resources/mail_icon.png \
     Resources/show.png \
     Resources/showBAK.png \
-    Resources/showWhite.png
+    Resources/showWhite.png \
+    fis.txt
