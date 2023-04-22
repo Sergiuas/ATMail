@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QByteArray>
-#include "composewindow.h"
+
 
 using namespace std;
 
