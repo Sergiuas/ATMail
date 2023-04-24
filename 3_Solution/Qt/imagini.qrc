@@ -37,5 +37,8 @@
         <file>star_black.png</file>
         <file>trash_black.png</file>
         <file>compose.png</file>
+        <file>attachment.png</file>
+        <file>attachment_black.png</file>
+        <file>Send.png</file>
     </qresource>
 </RCC>

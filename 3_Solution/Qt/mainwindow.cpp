@@ -20,11 +20,11 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
-    hide();
-    Interface *mailInterface=new Interface("test");
-    mailInterface->setWindowIcon(QIcon(":Logo.png"));
-    mailInterface->setWindowTitle("ATMail");
-    mailInterface->show();
+//    hide();
+//    Interface *mailInterface=new Interface("test","ceva@gmail.com","dada");
+//    mailInterface->setWindowIcon(QIcon(":Logo.png"));
+//    mailInterface->setWindowTitle("ATMail");
+//    mailInterface->show();
 }
 
 MainWindow::~MainWindow()
@@ -73,19 +73,41 @@ void MainWindow::on_LoginBtn_clicked()
                     fstream fis("fis.txt",ios::out);
                     fis<<FirstName.toStdString()<<" "<<LastName.toStdString();
                     fis.close();
+
+                    fstream email("email.txt",ios::out);
+                    email<<usernameDB.toStdString();
+                    email.close();
+
+                    fstream passwordtxt("password.txt",ios::out);
+                    passwordtxt<<passwordDB.toStdString();
+                    passwordtxt.close();
+
                     QFile file("fis.txt");
                     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
                         // Error handling code if the file can't be opened
                         return;
                     }
-
-                    // Reading data from the file
                     QByteArray fileData = file.readAll();
-
-                    // Closing the file when finished
                     file.close();
+
+                    QFile file2("email.txt");
+                    if (!file2.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                        // Error handling code if the file can't be opened
+                        return;
+                    }
+                    QByteArray fileData2 = file2.readAll();
+                    file2.close();
+
+                    QFile file3("password.txt");
+                    if (!file3.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                        // Error handling code if the file can't be opened
+                        return;
+                    }
+                    QByteArray fileData3 = file3.readAll();
+                    file3.close();
+
                     hide();
-                    Interface *mailInterface=new Interface(QString::fromUtf8(fileData));
+                    Interface *mailInterface=new Interface(QString::fromUtf8(fileData),QString::fromUtf8(fileData2),QString::fromUtf8(fileData3));
                     mailInterface->setWindowIcon(QIcon(":Logo.png"));
                     mailInterface->setWindowTitle("ATMail");
                     mailInterface->show();

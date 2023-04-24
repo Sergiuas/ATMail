@@ -4,11 +4,13 @@
 #include <QFile>
 #include <QTextStream>
 #include <QByteArray>
-
+#include <QFileDialog>
+#include <QMessageBox>
+#include "smtp.h"
 
 using namespace std;
 
-Interface::Interface(QString User, QWidget *parent) :
+Interface::Interface(QString User,QString Email,QString Password, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Interface)
 {
@@ -29,10 +31,12 @@ Interface::Interface(QString User, QWidget *parent) :
             ui->pushButton_5->setStyleSheet("QPushButton#pushButton_5:hover{background-color:#dbdbdb;}QPushButton#pushButton_5{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
             ui->pushButton_6->setStyleSheet("QPushButton#pushButton_6:hover{background-color:#dbdbdb;}QPushButton#pushButton_6{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
             ui->pushButton_7->setStyleSheet("QPushButton#pushButton_7:hover{background-color:#dbdbdb;}QPushButton#pushButton_7{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
-            ui->area1->setStyleSheet("background-color:#9e9e9e");
+            ui->area1->setStyleSheet("background-color:#9e9e9e;");
             ui->area2->setStyleSheet("background-color:#c2c2c2;");
             ui->label->setStyleSheet("color:black;");
             ui->user->setStyleSheet("color:black");
+            ui->dockWidgetContents->setStyleSheet("background-color:#9e9e9e;");
+            ui->dockWidget->setStyleSheet("background-color:#dbdbdb;");
         }
         else
         {
@@ -52,22 +56,17 @@ Interface::Interface(QString User, QWidget *parent) :
             ui->area2->setStyleSheet("background-color:#1c1c1b;");
             ui->label->setStyleSheet("color:white;");
             ui->user->setStyleSheet("color:white;");
+            ui->dockWidgetContents->setStyleSheet("background-color:#363634;");
+            ui->dockWidget->setStyleSheet("background-color:white;");
         }
     });
 
 
-//    QFile file("fis.txt");
-//    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-//        // Error handling code if the file can't be opened
-//        return;
-//    }
-
-//    // Reading data from the file
-//    QByteArray fileData = file.readAll();
-
-//    // Closing the file when finished
-//    file.close();
+    ui->dockWidget->hide();
+    ui->dockWidget->setWindowTitle("New Message");
     ui->user->setText(User);
+    this->Email=Email;
+    this->Password=Password;
 }
 
 Interface::~Interface()
@@ -94,4 +93,42 @@ void Interface::on_pushButton_8_clicked()
 }
 
 
+
+
+void Interface::on_attachment_clicked()
+{
+    //QString file_name=QFileDialog::getOpenFileName(this,"Select a file","C://");
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->attachLine->setText( fileListString );
+}
+
+
+void Interface::on_send_clicked()
+{
+    Smtp* smtp = new Smtp(this->Email, this->Password, "smtp.gmail.com", 465);
+       connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+       if( !files.isEmpty() )
+           smtp->sendMail(this->Email, ui->ToLine->text() , ui->SubjectLine->text(),ui->textEdit->toPlainText(), files );
+       else
+           smtp->sendMail(this->Email, ui->ToLine->text() , ui->SubjectLine->text(),ui->textEdit->toPlainText());
+}
+
+void Interface::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
 

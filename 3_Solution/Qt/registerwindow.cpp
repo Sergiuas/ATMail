@@ -121,7 +121,7 @@ void RegisterWindow::on_ContinuaBtn_clicked()
                    {
                        QMessageBox::information(this,"Autentificare reusita!","Datele au fost introduse cu succes");
                        this->hide();
-                       Interface *mailInterface=new Interface(prenume+" "+nume);
+                       Interface *mailInterface=new Interface(prenume+" "+nume,username,password);
                        mailInterface->setWindowIcon(QIcon(":Logo.png"));
                        mailInterface->setWindowTitle("ATMail");
                        mailInterface->show();
