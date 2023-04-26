@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mail_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="registerwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mail_interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_registerwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="mail_interface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="registerwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mail_interface.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="registerwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="imagini.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="search.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="sent.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="sent_black.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="show.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="showBAK.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="showWhite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="star.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="star_black.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="sun.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="trash.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="trash_black.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="moon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Nume.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Parola.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Prenume.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RegisterForm.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RegisterFormbk.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Logo_black.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="mail_icon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="InapoiBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="InapoiBtnOn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="inbox.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="inbox_black.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Inregistrare_off.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Inregistrare_on.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="compose.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Confirma.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ContinuaBtn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ContinuaBtnOn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Email.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="folder_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="folder_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="folder_yellow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="hide.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="hideBAK.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="hideWhite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Autentificare_off.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Autentificare_on.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bg.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

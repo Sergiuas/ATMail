@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterWindow</class>
+ <widget class="QDialog" name="RegisterWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>939</width>
+    <height>645</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>939</width>
+    <height>645</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>939</width>
+    <height>645</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#RegisterWindow
+{
+	background-image:url(:RegisterForm.png);
+}</string>
+  </property>
+  <widget class="QPushButton" name="ContinuaBtn">
+   <property name="geometry">
+    <rect>
+     <x>731</x>
+     <y>590</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ContinuaBtn {
+background-color: transparent;
+border-image: url(:ContinuaBtn.png);
+background: none;
+border: none;
+background-repeat: none;
+}
+#ContinuaBtn:hover
+{
+border-image: url(:ContinuaBtnOn.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="InapoiBtn">
+   <property name="geometry">
+    <rect>
+     <x>497</x>
+     <y>590</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#InapoiBtn {
+background-color: transparent;
+border-image: url(:InapoiBtn.png);
+background: none;
+border: none;
+background-repeat: none;
+}
+#InapoiBtn:hover
+{
+border-image: url(:InapoiBtnOn.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="numeEdit">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>170</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#numeEdit
+{
+    border: 2px solid rgb(0, 0, 128);
+	border-radius: 10px;
+	padding-left: 10px;
+	color:#fff;
+	background-color: rgba(0, 26, 102,.5);
+}
+
+#numeEdit:hover
+{
+	border: 2px solid rgb(48,50,62);
+}
+
+#numeEdit:focus
+{
+	border: 2px solid rgb(85,170,255);
+	background-color: rgb(43,45,56);
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti numele</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="NumeLabel">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>40</y>
+     <width>331</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#NumeLabel
+{
+background-color: transparent;
+border-image: url(:Nume.png);
+background: none;
+border: none;
+background-repeat: none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PrenumeLabel">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>150</y>
+     <width>281</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#PrenumeLabel
+{
+background-color: transparent;
+border-image: url(:Prenume.png);
+background: none;
+border: none;
+background-repeat: none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="prenumeEdit">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>264</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#prenumeEdit
+{
+    border: 2px solid rgb(0, 0, 128);
+	border-radius: 10px;
+	padding-left: 10px;
+	color:#fff;
+	background-color: rgba(0, 26, 102,.5);
+}
+
+#prenumeEdit:hover
+{
+	border: 2px solid rgb(48,50,62);
+}
+
+#prenumeEdit:focus
+{
+	border: 2px solid rgb(85,170,255);
+	background-color: rgb(43,45,56);
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti prenumele</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="EmailLabel">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>240</y>
+     <width>341</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#EmailLabel
+{
+background-color: transparent;
+border-image: url(:Email.png);
+background: none;
+border: none;
+background-repeat: none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="emailEdit">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>364</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#emailEdit
+{
+    border: 2px solid rgb(0, 0, 128);
+	border-radius: 10px;
+	padding-left: 10px;
+	color:#fff;
+	background-color: rgba(0, 26, 102,.5);
+}
+
+#emailEdit:hover
+{
+	border: 2px solid rgb(48,50,62);
+}
+
+#emailEdit:focus
+{
+	border: 2px solid rgb(85,170,255);
+	background-color: rgb(43,45,56);
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti email-ul</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ParolaLabel">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>370</y>
+     <width>311</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ParolaLabel
+{
+background-color: transparent;
+border-image: url(:Parola.png);
+background: none;
+border: none;
+background-repeat: none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="parolaEdit">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>490</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#parolaEdit
+{
+    border: 2px solid rgb(0, 0, 128);
+	border-radius: 10px;
+	padding-left: 10px;
+	color:#fff;
+	background-color: rgba(0, 26, 102,.5);
+}
+
+#parolaEdit:hover
+{
+	border: 2px solid rgb(48,50,62);
+}
+
+#parolaEdit:focus
+{
+	border: 2px solid rgb(85,170,255);
+	background-color: rgb(43,45,56);
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti parola</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ConfirmaLabel">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>380</y>
+     <width>301</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ConfirmaLabel
+{
+background-color: transparent;
+border-image: url(:Confirma.png);
+background: none;
+border: none;
+background-repeat: none;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="confirmaEdit">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>490</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#confirmaEdit
+{
+    border: 2px solid rgb(0, 0, 128);
+	border-radius: 10px;
+	padding-left: 10px;
+	color:#fff;
+	background-color: rgba(0, 26, 102,.5);
+}
+
+#confirmaEdit:hover
+{
+	border: 2px solid rgb(48,50,62);
+}
+
+#confirmaEdit:focus
+{
+	border: 2px solid rgb(85,170,255);
+	background-color: rgb(43,45,56);
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti parola</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>530</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>31</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox::indicator:unchecked {
+    image: url(:show.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:hide.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxConfirm">
+   <property name="geometry">
+    <rect>
+     <x>801</x>
+     <y>530</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox::indicator:unchecked {
+    image: url(:show.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:hide.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>ContinuaBtn</zorder>
+  <zorder>InapoiBtn</zorder>
+  <zorder>NumeLabel</zorder>
+  <zorder>PrenumeLabel</zorder>
+  <zorder>EmailLabel</zorder>
+  <zorder>ParolaLabel</zorder>
+  <zorder>ConfirmaLabel</zorder>
+  <zorder>numeEdit</zorder>
+  <zorder>parolaEdit</zorder>
+  <zorder>prenumeEdit</zorder>
+  <zorder>emailEdit</zorder>
+  <zorder>confirmaEdit</zorder>
+  <zorder>checkBoxConfirm</zorder>
+  <zorder>checkBox</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
