@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\atmail\atmailSolution\x64\Debug\AppClient.exe</FullPath>
+      <FullPath>E:\atmail\atmailSolution\AppClient\x64\Debug\AppClient.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -1,15 +1,15 @@
 ﻿  Server.cpp
 E:\atmail\atmailSolution\AppCommon\app_message.h(63,1): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
-E:\atmail\atmailSolution\AppServer\Server.cpp(59): message : see reference to function template instantiation 'app::message<T> &app::operator <<<uint32_t>(app::message<T> &,const DataType &)' being compiled
+E:\atmail\atmailSolution\AppServer\Server.cpp(49): message : see reference to function template instantiation 'app::message<T> &app::operator <<<uint32_t>(app::message<T> &,const DataType &)' being compiled
           with
           [
-              T=CustomMsgTypes,
+              T=app::MessageType,
               DataType=uint32_t
           ]
-E:\atmail\atmailSolution\AppServer\Server.cpp(59): message : see reference to function template instantiation 'app::message<T> &app::operator <<<uint32_t>(app::message<T> &,const DataType &)' being compiled
+E:\atmail\atmailSolution\AppServer\Server.cpp(49): message : see reference to function template instantiation 'app::message<T> &app::operator <<<uint32_t>(app::message<T> &,const DataType &)' being compiled
           with
           [
-              T=CustomMsgTypes,
+              T=app::MessageType,
               DataType=uint32_t
           ]
   AppServer.vcxproj -> E:\atmail\atmailSolution\x64\Debug\AppServer.exe

@@ -96,7 +96,7 @@ namespace app
 
 							// And very important! Issue a task to the connection's
 							// asio context to sit and wait for bytes to arrive!
-							m_deqConnections.back()->ConnectToClient(nIDCounter++);
+							m_deqConnections.back()->ConnectToClient(this, nIDCounter++);
 
 							std::cout << "[" << m_deqConnections.back()->GetID() << "] Connection Approved\n";
 						}
@@ -179,6 +179,32 @@ namespace app
 					std::remove(m_deqConnections.begin(), m_deqConnections.end(), nullptr), m_deqConnections.end());
 		}
 
+		void MessageClientOnID(const message<T>& msg, uint32_t ID) //TODO: doar de test sterge
+		{
+
+			//std::deque<std::shared_ptr<connection<T>>>::iterator it = m_deqConnections.begin();
+
+			//auto& client = *it;
+			//// Check client is connected...
+			//if (client && client->IsConnected())
+			//{
+			//	client->Send(msg);
+			//}
+
+			//// Check client is connected...
+			//if (client && client->IsConnected())
+			//{
+			//		client->Send(msg);
+			//}
+			//else
+			//{
+			//	// The client couldnt be contacted, so assume it has
+			//	// disconnected.
+			//	OnClientDisconnect(client);
+			//	client.reset();
+			//}
+		}
+
 		// Force server to respond to incoming messages
 		void Update(size_t nMaxMessages = -1, bool bWait = false)
 		{
@@ -198,6 +224,14 @@ namespace app
 				nMessageCount++;
 			}
 		}
+
+		public:
+			// called when a client is validated
+
+			virtual void OnClientValidated(std::shared_ptr<connection<T>> client)
+			{
+
+			}
 
 	protected:
 		// This server class should override thse functions to implement

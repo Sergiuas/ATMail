@@ -21,9 +21,12 @@
   <ItemGroup>
     <ClInclude Include="app_common.h" />
     <ClInclude Include="app_connection.h" />
+    <ClInclude Include="app_dbconnection.h" />
+    <ClInclude Include="app_exceptions.h" />
     <ClInclude Include="app_iclient.h" />
     <ClInclude Include="app_iserver.h" />
     <ClInclude Include="app_message.h" />
+    <ClInclude Include="app_messagetype.h" />
     <ClInclude Include="app_net.h" />
     <ClInclude Include="app_tsqueue.h" />
   </ItemGroup>

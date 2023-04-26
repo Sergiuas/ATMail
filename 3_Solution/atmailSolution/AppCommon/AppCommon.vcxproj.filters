@@ -36,5 +36,14 @@
     <ClInclude Include="app_iserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="app_exceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="app_messagetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="app_dbconnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
