@@ -7,6 +7,11 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include "smtp.h"
+#include <QList>
+#include "QVBoxLayout"
+#include "QToolButton"
+#include "QPixmap"
+#include "QIcon"
 
 using namespace std;
 
@@ -67,6 +72,38 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
     ui->user->setText(User);
     this->Email=Email;
     this->Password=Password;
+
+    /////////
+;
+    QVBoxLayout *layout = new QVBoxLayout(ui->scrollZone);
+    layout->setAlignment(Qt::AlignTop);
+    layout->setSpacing(10);
+    layout->setContentsMargins(10,10,10,10);
+
+    //QList <QPushButton*> buttonList;
+    QList <QToolButton*> buttonList;
+    // Add incoming mails to the layout
+    for (int i = 0; i < 7; i++) {
+        QToolButton* button = new QToolButton();
+        QIcon icon(":mail.png");
+
+        button->setFixedSize(775,50);
+        //QPixmap pixmap = icon.pixmap(QSize(100, 100));
+        //QIcon resizedIcon(pixmap);
+        button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
+        button->setText("Test\nSubject");
+        button->setIcon(icon);
+        button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+        buttonList.append(button);
+    }
+
+    for(QToolButton *button :buttonList)
+    {
+        layout->addWidget(button);
+    }
+
+
 }
 
 Interface::~Interface()

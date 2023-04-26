@@ -2,10 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QtSql>
-#include <QSql>
-#include <QSqlQuery>
-#include <QSqlDatabase>
 #include <qmessagebox.h>
 
 
@@ -28,6 +24,5 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase database;
 };
 #endif // MAINWINDOW_H

@@ -678,6 +678,7 @@ background-repeat: none;
     <string notr="true">#dockWidget
 {
 	background-color:white;
+	
 }</string>
    </property>
    <widget class="QWidget" name="dockWidgetContents">
@@ -685,6 +686,7 @@ background-repeat: none;
      <string notr="true">#dockWidgetContents
 {
 background-color:#242423;
+border: 2px solid lightgray;
 }</string>
     </property>
     <widget class="QLineEdit" name="ToLine">
@@ -908,6 +910,67 @@ background-repeat: none;
     <zorder>attachLine</zorder>
    </widget>
   </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>110</y>
+     <width>801</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #242423</string>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollZone">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>799</width>
+      <height>489</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#scrollAreaWidgetContents
+{
+	background-color: #242423;
+}</string>
+    </property>
+   </widget>
+  </widget>
+  <zorder>area1</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>Logo</zorder>
+  <zorder>area2</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>inbox</zorder>
+  <zorder>star</zorder>
+  <zorder>sent</zorder>
+  <zorder>trash</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_3</zorder>
+  <zorder>pushButton_5</zorder>
+  <zorder>pushButton_6</zorder>
+  <zorder>pushButton_7</zorder>
+  <zorder>work</zorder>
+  <zorder>personal</zorder>
+  <zorder>credit</zorder>
+  <zorder>search</zorder>
+  <zorder>find</zorder>
+  <zorder>sw</zorder>
+  <zorder>user</zorder>
+  <zorder>pushButton_8</zorder>
+  <zorder>compose</zorder>
+  <zorder>label</zorder>
+  <zorder>scrollArea</zorder>
+  <zorder>dockWidget</zorder>
  </widget>
  <resources/>
  <connections>

@@ -2,11 +2,8 @@
 #define REGISTERWINDOW_H
 
 #include <QDialog>
-#include <QtSql>
-#include <QSql>
-#include <QSqlQuery>
-#include <QSqlDatabase>
 #include <qmessagebox.h>
+
 
 namespace Ui {
 class RegisterWindow;
@@ -28,7 +25,6 @@ private slots:
 
 private:
     Ui::RegisterWindow *ui;
-    QSqlDatabase database;
 };
 
 #endif // REGISTERWINDOW_H

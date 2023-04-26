@@ -40,5 +40,7 @@
         <file>attachment.png</file>
         <file>attachment_black.png</file>
         <file>Send.png</file>
+        <file>mail.png</file>
+        <file>mail_black.png</file>
     </qresource>
 </RCC>

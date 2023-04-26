@@ -200,7 +200,7 @@ void Smtp::readyRead()
     {
         // HELO response was okay (well, it has to be)
 
-        //Apperantly for Google it is mandatory to have MAIL FROM and RCPT email formated the following way -> <email@gmail.com>
+
        // qDebug() << "MAIL FROM:<" << from << ">";
         *t << "MAIL FROM:<" << from << ">\r\n";
         t->flush();
@@ -208,7 +208,7 @@ void Smtp::readyRead()
     }
     else if ( state == Rcpt && responseLine == "250" )
     {
-        //Apperantly for Google it is mandatory to have MAIL FROM and RCPT email formated the following way -> <email@gmail.com>
+
         *t << "RCPT TO:<" << rcpt << ">\r\n"; //r
         t->flush();
         state = Data;
@@ -232,7 +232,7 @@ void Smtp::readyRead()
 
         *t << "QUIT\r\n";
         t->flush();
-        // here, we just close.
+
         state = Close;
         emit status( tr( "Message sent" ) );
     }
@@ -243,8 +243,8 @@ void Smtp::readyRead()
     }
     else
     {
-        // something broke.
-        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
+
+        QMessageBox::warning( 0, tr( "ATMail" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
         state = Close;
         emit status( tr( "Failed to send message" ) );
     }
