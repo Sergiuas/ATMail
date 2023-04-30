@@ -13,6 +13,7 @@ SOURCES += \
     interface.cpp \
     main.cpp \
     mainwindow.cpp \
+    readmail.cpp \
     registerwindow.cpp \
     smtp.cpp
 
@@ -20,12 +21,14 @@ HEADERS += \
     dbconnection.h \
     interface.h \
     mainwindow.h \
+    readmail.h \
     registerwindow.h \
     smtp.h
 
 FORMS += \
     interface.ui \
     mainwindow.ui \
+    readmail.ui \
     registerwindow.ui
 
 # Default rules for deployment.

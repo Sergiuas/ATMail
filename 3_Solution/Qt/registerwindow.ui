@@ -37,7 +37,7 @@
 	background-image:url(:RegisterForm.png);
 }</string>
   </property>
-  <widget class="QPushButton" name="ContinuaBtn">
+  <widget class="QPushButton" name="ContinueBtn">
    <property name="geometry">
     <rect>
      <x>731</x>
@@ -50,14 +50,14 @@
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">#ContinuaBtn {
+    <string notr="true">#ContinueBtn {
 background-color: transparent;
 border-image: url(:ContinuaBtn.png);
 background: none;
 border: none;
 background-repeat: none;
 }
-#ContinuaBtn:hover
+#ContinueBtn:hover
 {
 border-image: url(:ContinuaBtnOn.png);
 }</string>
@@ -66,7 +66,7 @@ border-image: url(:ContinuaBtnOn.png);
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="InapoiBtn">
+  <widget class="QPushButton" name="BackBtn">
    <property name="geometry">
     <rect>
      <x>497</x>
@@ -79,14 +79,14 @@ border-image: url(:ContinuaBtnOn.png);
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">#InapoiBtn {
+    <string notr="true">#BackBtn {
 background-color: transparent;
 border-image: url(:InapoiBtn.png);
 background: none;
 border: none;
 background-repeat: none;
 }
-#InapoiBtn:hover
+#BackBtn:hover
 {
 border-image: url(:InapoiBtnOn.png);
 }</string>
@@ -95,7 +95,7 @@ border-image: url(:InapoiBtnOn.png);
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="numeEdit">
+  <widget class="QLineEdit" name="LastnameEdit">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -110,7 +110,7 @@ border-image: url(:InapoiBtnOn.png);
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#numeEdit
+    <string notr="true">#LastnameEdit
 {
     border: 2px solid rgb(0, 0, 128);
 	border-radius: 10px;
@@ -134,7 +134,7 @@ border-image: url(:InapoiBtnOn.png);
     <string>Introduceti numele</string>
    </property>
   </widget>
-  <widget class="QLabel" name="NumeLabel">
+  <widget class="QLabel" name="LastnameLabel">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -149,7 +149,7 @@ border-image: url(:InapoiBtnOn.png);
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#NumeLabel
+    <string notr="true">#LastnameLabel
 {
 background-color: transparent;
 border-image: url(:Nume.png);
@@ -162,7 +162,7 @@ background-repeat: none;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="PrenumeLabel">
+  <widget class="QLabel" name="FirstnameLabel">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -177,7 +177,7 @@ background-repeat: none;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#PrenumeLabel
+    <string notr="true">#FirstnameLabel
 {
 background-color: transparent;
 border-image: url(:Prenume.png);
@@ -190,7 +190,7 @@ background-repeat: none;
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="prenumeEdit">
+  <widget class="QLineEdit" name="FirstnameEdit">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -205,7 +205,7 @@ background-repeat: none;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#prenumeEdit
+    <string notr="true">#FirstnameEdit
 {
     border: 2px solid rgb(0, 0, 128);
 	border-radius: 10px;
@@ -296,7 +296,7 @@ background-repeat: none;
     <string>Introduceti email-ul</string>
    </property>
   </widget>
-  <widget class="QLabel" name="ParolaLabel">
+  <widget class="QLabel" name="PassLabel">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -311,7 +311,7 @@ background-repeat: none;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#ParolaLabel
+    <string notr="true">#PassLabel
 {
 background-color: transparent;
 border-image: url(:Parola.png);
@@ -324,7 +324,7 @@ background-repeat: none;
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="parolaEdit">
+  <widget class="QLineEdit" name="passEdit">
    <property name="geometry">
     <rect>
      <x>490</x>
@@ -339,7 +339,7 @@ background-repeat: none;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#parolaEdit
+    <string notr="true">#passEdit
 {
     border: 2px solid rgb(0, 0, 128);
 	border-radius: 10px;
@@ -366,7 +366,7 @@ background-repeat: none;
     <string>Introduceti parola</string>
    </property>
   </widget>
-  <widget class="QLabel" name="ConfirmaLabel">
+  <widget class="QLabel" name="ConfirmLabel">
    <property name="geometry">
     <rect>
      <x>660</x>
@@ -381,7 +381,7 @@ background-repeat: none;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#ConfirmaLabel
+    <string notr="true">#ConfirmLabel
 {
 background-color: transparent;
 border-image: url(:Confirma.png);
@@ -394,7 +394,7 @@ background-repeat: none;
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="confirmaEdit">
+  <widget class="QLineEdit" name="confirmEdit">
    <property name="geometry">
     <rect>
      <x>720</x>
@@ -409,7 +409,7 @@ background-repeat: none;
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#confirmaEdit
+    <string notr="true">#confirmEdit
 {
     border: 2px solid rgb(0, 0, 128);
 	border-radius: 10px;
@@ -418,12 +418,12 @@ background-repeat: none;
 	background-color: rgba(0, 26, 102,.5);
 }
 
-#confirmaEdit:hover
+#confirmEdit:hover
 {
 	border: 2px solid rgb(48,50,62);
 }
 
-#confirmaEdit:focus
+#confirmEdit:focus
 {
 	border: 2px solid rgb(85,170,255);
 	background-color: rgb(43,45,56);
@@ -498,18 +498,18 @@ QCheckBox::indicator:checked {
     <string/>
    </property>
   </widget>
-  <zorder>ContinuaBtn</zorder>
-  <zorder>InapoiBtn</zorder>
-  <zorder>NumeLabel</zorder>
-  <zorder>PrenumeLabel</zorder>
+  <zorder>ContinueBtn</zorder>
+  <zorder>BackBtn</zorder>
+  <zorder>LastnameLabel</zorder>
+  <zorder>FirstnameLabel</zorder>
   <zorder>EmailLabel</zorder>
-  <zorder>ParolaLabel</zorder>
-  <zorder>ConfirmaLabel</zorder>
-  <zorder>numeEdit</zorder>
-  <zorder>parolaEdit</zorder>
-  <zorder>prenumeEdit</zorder>
+  <zorder>PassLabel</zorder>
+  <zorder>ConfirmLabel</zorder>
+  <zorder>LastnameEdit</zorder>
+  <zorder>passEdit</zorder>
+  <zorder>FirstnameEdit</zorder>
   <zorder>emailEdit</zorder>
-  <zorder>confirmaEdit</zorder>
+  <zorder>confirmEdit</zorder>
   <zorder>checkBoxConfirm</zorder>
   <zorder>checkBox</zorder>
  </widget>

@@ -51,7 +51,7 @@ void Smtp::sendMail(const QString &from, const QString &to, const QString &subje
                 if (!file.open(QIODevice::ReadOnly))
                 {
                     qDebug("Couldn't open the file");
-                    QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Couldn't open the file\n\n" )  );
+                    QMessageBox::warning( 0, tr( "ATMail" ), tr( "Couldn't open the file\n\n" )  );
                         return ;
                 }
                 QByteArray bytes = file.readAll();
@@ -141,7 +141,7 @@ void Smtp::readyRead()
 
         state = HandShake;
     }
-    //No need, because I'm using socket->startClienEncryption() which makes the SSL handshake for you
+
     /*else if (state == Tls && responseLine == "250")
     {
         // Trying AUTH
@@ -178,8 +178,7 @@ void Smtp::readyRead()
     {
         //Trying User
         qDebug() << "Username";
-        //GMAIL is using XOAUTH2 protocol, which basically means that password and username has to be sent in base64 coding
-        //https://developers.google.com/gmail/xoauth2_protocol
+
 //        *t << QByteArray().append(user).toBase64()  << "\r\n";
          *t << user.toUtf8().toBase64()<<"\r\n";
         t->flush();
@@ -198,7 +197,7 @@ void Smtp::readyRead()
     }
     else if ( state == Mail && responseLine == "235" )
     {
-        // HELO response was okay (well, it has to be)
+
 
 
        // qDebug() << "MAIL FROM:<" << from << ">";

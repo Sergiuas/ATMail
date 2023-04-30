@@ -11,17 +11,17 @@ RegisterWindow::RegisterWindow(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->checkBox, &QCheckBox::stateChanged, [=](int state){
         if (state == Qt::Checked) {
-            ui->parolaEdit->setEchoMode(QLineEdit::Normal);
+            ui->passEdit->setEchoMode(QLineEdit::Normal);
         } else {
-            ui->parolaEdit->setEchoMode(QLineEdit::Password);
+            ui->passEdit->setEchoMode(QLineEdit::Password);
         }
     });
 
     connect(ui->checkBoxConfirm, &QCheckBox::stateChanged, [=](int state){
         if (state == Qt::Checked) {
-            ui->confirmaEdit->setEchoMode(QLineEdit::Normal);
+            ui->confirmEdit->setEchoMode(QLineEdit::Normal);
         } else {
-            ui->confirmaEdit->setEchoMode(QLineEdit::Password);
+            ui->confirmEdit->setEchoMode(QLineEdit::Password);
         }
     });
 }
@@ -33,7 +33,7 @@ RegisterWindow::~RegisterWindow()
 }
 
 
-void RegisterWindow::on_InapoiBtn_clicked()
+void RegisterWindow::on_BackBtn_clicked()
 {
     QMessageBox::StandardButton reply;
      reply = QMessageBox::question(this, "Sunteti sigur?", "Doriti sa va intoarceti?",
@@ -54,17 +54,17 @@ void RegisterWindow::on_InapoiBtn_clicked()
 }
 
 
-void RegisterWindow::on_ContinuaBtn_clicked()
+void RegisterWindow::on_ContinueBtn_clicked()
 {
         dbconnection db;
 
         QString username = ui->emailEdit->text();
-        QString password = ui->parolaEdit->text();
-        QString nume = ui->numeEdit->text();
-        QString prenume = ui->prenumeEdit->text();
-        QString confirma = ui->confirmaEdit->text();
+        QString password = ui->passEdit->text();
+        QString Lastname = ui->LastnameEdit->text();
+        QString Firstname = ui->FirstnameEdit->text();
+        QString confirm = ui->confirmEdit->text();
 
-        if (password != confirma)
+        if (password != confirm)
         {
 
          QMessageBox::critical(this, "Eroare!","Parolele nu corespund!");
@@ -73,9 +73,9 @@ void RegisterWindow::on_ContinuaBtn_clicked()
 
         else
         {
-            if (db.getDatabase().open() && username!="" && password!=""&& nume!="" && prenume!="" && confirma!="")
+            if (db.getDatabase().open() && username!="" && password!=""&& Lastname!="" && Firstname!="" && confirm!="")
             {
-                db.registerToApp(prenume,nume,username,password,this);
+                db.registerToApp(Firstname,Lastname,username,password,this);
                 this->hide();
             }
 

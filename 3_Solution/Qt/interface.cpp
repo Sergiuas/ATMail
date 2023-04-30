@@ -12,6 +12,7 @@
 #include "QToolButton"
 #include "QPixmap"
 #include "QIcon"
+#include <readmail.h>
 
 using namespace std;
 
@@ -91,10 +92,10 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
         //QPixmap pixmap = icon.pixmap(QSize(100, 100));
         //QIcon resizedIcon(pixmap);
         button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-
         button->setText("Test\nSubject");
         button->setIcon(icon);
         button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+        connect(button, SIGNAL(&QToolButton::clicked), this, SLOT(readMail::showWindow()));
         buttonList.append(button);
     }
 

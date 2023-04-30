@@ -18,9 +18,9 @@ public:
     ~RegisterWindow();
 
 private slots:
-    void on_InapoiBtn_clicked();
+    void on_BackBtn_clicked();
 
-    void on_ContinuaBtn_clicked();
+    void on_ContinueBtn_clicked();
 
 
 private:
