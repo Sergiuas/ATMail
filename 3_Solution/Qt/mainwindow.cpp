@@ -21,6 +21,21 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
+    fstream in("RememberMe.txt",ios::in);
+    string user, pass;
+    string flag;
+    getline(in, flag);
+    getline(in, user);
+    getline(in, pass);
+    if (flag=="1")
+    {
+        QString Username = QString::fromStdString(user);
+        QString Password= QString::fromStdString(pass);
+        ui->textEditUserName->setText(Username);
+        ui->textEditPassword->setText(Password);
+    }
+    in.close();
+
 //    hide();
 //    Interface *mailInterface=new Interface("test","ceva@gmail.com","dada");
 //    mailInterface->setWindowIcon(QIcon(":Logo.png"));
@@ -37,8 +52,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_LoginBtn_clicked()
 {
-    //database = QSqlDatabase::addDatabase("QODBC");
-    //database.setDatabaseName("DRIVER={SQL Server};SERVER=2648-ATM-5603N;DATABASE=ProiectQt;UID=minulescu.daniel;PWD=;Trusted_Connection=Yes;");
+
+
+  if (ui->checkBox_2->isChecked())
+  {
+    fstream f("RememberMe.txt",ios::out);
+    f<<"1"<<endl;
+    f<<ui->textEditUserName->text().toStdString()<<endl;
+    f<<ui->textEditPassword->text().toStdString()<<endl;
+    f.close();
+  }
+  else
+  {
+    fstream f("RememberMe.txt",ios::out);
+    f<<"0"<<endl;
+    f.close();
+  }
 
     QString username = ui->textEditUserName->text();
     QString password = ui->textEditPassword->text();

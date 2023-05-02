@@ -14,6 +14,7 @@
 #include "QIcon"
 #include <readmail.h>
 
+
 using namespace std;
 
 Interface::Interface(QString User,QString Email,QString Password, QWidget *parent) :
@@ -66,6 +67,7 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->dockWidget->setStyleSheet("background-color:white;");
         }
     });
+
 
 
     ui->dockWidget->hide();

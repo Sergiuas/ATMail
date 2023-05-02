@@ -301,6 +301,24 @@ background-repeat: none;
      <string/>
     </property>
    </widget>
+   <widget class="QCheckBox" name="checkBox_2">
+    <property name="geometry">
+     <rect>
+      <x>173</x>
+      <y>462</y>
+      <width>141</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox { font-weight: bold; color: #fff; background: transparent;  }
+QCheckBox::indicator { width: 17px; height: 17px; }                            
+QCheckBox::hover { background: transparent; }</string>
+    </property>
+    <property name="text">
+     <string>Remember me</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

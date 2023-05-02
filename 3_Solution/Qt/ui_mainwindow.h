@@ -35,6 +35,7 @@ public:
     QLineEdit *textEditUserName;
     QCheckBox *checkBox;
     QLabel *mail_icon;
+    QCheckBox *checkBox_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -182,6 +183,12 @@ public:
 "border: none;\n"
 "background-repeat: none;\n"
 "}"));
+        checkBox_2 = new QCheckBox(centralwidget);
+        checkBox_2->setObjectName("checkBox_2");
+        checkBox_2->setGeometry(QRect(173, 462, 141, 24));
+        checkBox_2->setStyleSheet(QString::fromUtf8("QCheckBox { font-weight: bold; color: #fff; background: transparent;  }\n"
+"QCheckBox::indicator { width: 17px; height: 17px; }                            \n"
+"QCheckBox::hover { background: transparent; }"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -211,6 +218,7 @@ public:
         textEditUserName->setPlaceholderText(QCoreApplication::translate("MainWindow", "Introduceti mail-ul", nullptr));
         checkBox->setText(QString());
         mail_icon->setText(QString());
+        checkBox_2->setText(QCoreApplication::translate("MainWindow", "Remember me", nullptr));
     } // retranslateUi
 
 };
