@@ -12,10 +12,17 @@
 #include "QToolButton"
 #include "QPixmap"
 #include "QIcon"
-#include <readmail.h>
+
 
 
 using namespace std;
+
+void Interface::openMail()
+{
+    ui->scrollArea->hide();
+    ui->viewMail->show();
+    ui->mailContent->setReadOnly(true);
+}
 
 Interface::Interface(QString User,QString Email,QString Password, QWidget *parent) :
     QDialog(parent),
@@ -75,9 +82,10 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
     ui->user->setText(User);
     this->Email=Email;
     this->Password=Password;
-
+    ui->viewMail->hide();
+  //  ui->viewMail->setParent(this);
     /////////
-;
+
     QVBoxLayout *layout = new QVBoxLayout(ui->scrollZone);
     layout->setAlignment(Qt::AlignTop);
     layout->setSpacing(10);
@@ -97,7 +105,8 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
         button->setText("Test\nSubject");
         button->setIcon(icon);
         button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
-        connect(button, SIGNAL(&QToolButton::clicked), this, SLOT(readMail::showWindow()));
+        connect(button, &QToolButton::clicked, this, &Interface::openMail);
+
         buttonList.append(button);
     }
 
@@ -170,5 +179,12 @@ void Interface::mailSent(QString status)
 {
     if(status == "Message sent")
         QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
+
+
+void Interface::on_exitBtn_clicked()
+{
+    ui->viewMail->hide();
+    ui->scrollArea->show();
 }
 

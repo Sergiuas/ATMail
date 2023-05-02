@@ -15,6 +15,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDockWidget>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -68,6 +69,15 @@ public:
     QLineEdit *attachLine;
     QScrollArea *scrollArea;
     QWidget *scrollZone;
+    QGroupBox *viewMail;
+    QLabel *fromLabel;
+    QTextEdit *mailContent;
+    QLabel *fromText;
+    QPushButton *exitBtn;
+    QPushButton *forwardBtn;
+    QLabel *forwardTo;
+    QPushButton *replyBtn;
+    QLabel *replyTo;
 
     void setupUi(QDialog *Interface)
     {
@@ -519,6 +529,109 @@ public:
 "	background-color: #242423;\n"
 "}"));
         scrollArea->setWidget(scrollZone);
+        viewMail = new QGroupBox(Interface);
+        viewMail->setObjectName("viewMail");
+        viewMail->setGeometry(QRect(338, 110, 801, 491));
+        viewMail->setStyleSheet(QString::fromUtf8("#viewMail\n"
+"{\n"
+"	background: #242423;\n"
+"}"));
+        fromLabel = new QLabel(viewMail);
+        fromLabel->setObjectName("fromLabel");
+        fromLabel->setGeometry(QRect(30, 40, 51, 20));
+        fromLabel->setStyleSheet(QString::fromUtf8("#fromLabel\n"
+"{\n"
+"	font-weight:bold;\n"
+"	color:white;\n"
+"\n"
+"}"));
+        mailContent = new QTextEdit(viewMail);
+        mailContent->setObjectName("mailContent");
+        mailContent->setGeometry(QRect(18, 100, 761, 371));
+        mailContent->setStyleSheet(QString::fromUtf8("#mailContent\n"
+"{\n"
+"	background-color:#1c1c1b;\n"
+"	color:white;\n"
+"}"));
+        fromText = new QLabel(viewMail);
+        fromText->setObjectName("fromText");
+        fromText->setGeometry(QRect(86, 40, 71, 20));
+        fromText->setStyleSheet(QString::fromUtf8("#fromText\n"
+"{\n"
+"        color:white;\n"
+"}"));
+        exitBtn = new QPushButton(viewMail);
+        exitBtn->setObjectName("exitBtn");
+        exitBtn->setGeometry(QRect(759, 15, 15, 15));
+        exitBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        exitBtn->setStyleSheet(QString::fromUtf8("#exitBtn {\n"
+"background-color: transparent;\n"
+"border-image: url(:red_x.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        exitBtn->setAutoDefault(true);
+        forwardBtn = new QPushButton(viewMail);
+        forwardBtn->setObjectName("forwardBtn");
+        forwardBtn->setGeometry(QRect(570, 20, 131, 29));
+        forwardBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        forwardBtn->setStyleSheet(QString::fromUtf8("#forwardBtn\n"
+"{\n"
+"	    background-color: white;\n"
+"		border-radius: 13px;\n"
+"        color: black;\n"
+"}\n"
+"\n"
+"\n"
+"#forwardBtn:hover\n"
+"{\n"
+"	    background-color: #dbdad9;\n"
+"}"));
+        forwardTo = new QLabel(viewMail);
+        forwardTo->setObjectName("forwardTo");
+        forwardTo->setGeometry(QRect(577, 22, 25, 25));
+        forwardTo->setStyleSheet(QString::fromUtf8("#forwardTo {\n"
+"background-color: transparent;\n"
+"border-image: url(:forwardTo.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        replyBtn = new QPushButton(viewMail);
+        replyBtn->setObjectName("replyBtn");
+        replyBtn->setGeometry(QRect(420, 20, 131, 29));
+        replyBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        replyBtn->setStyleSheet(QString::fromUtf8("#replyBtn\n"
+"{\n"
+"	    background-color: white;\n"
+"		border-radius: 13px;\n"
+"        color: black;\n"
+"}\n"
+"\n"
+"\n"
+"#replyBtn:hover\n"
+"{\n"
+"	    background-color: #dbdad9;\n"
+"}"));
+        replyTo = new QLabel(viewMail);
+        replyTo->setObjectName("replyTo");
+        replyTo->setGeometry(QRect(429, 22, 25, 25));
+        replyTo->setStyleSheet(QString::fromUtf8("#replyTo {\n"
+"background-color: transparent;\n"
+"border-image: url(:replyTo.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        fromLabel->raise();
+        fromText->raise();
+        mailContent->raise();
+        exitBtn->raise();
+        forwardBtn->raise();
+        forwardTo->raise();
+        replyBtn->raise();
+        replyTo->raise();
         area1->raise();
         pushButton->raise();
         Logo->raise();
@@ -547,6 +660,7 @@ public:
         compose->raise();
         label->raise();
         scrollArea->raise();
+        viewMail->raise();
         dockWidget->raise();
 
         retranslateUi(Interface);
@@ -554,6 +668,7 @@ public:
 
         send->setDefault(true);
         attachment->setDefault(true);
+        exitBtn->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(Interface);
@@ -593,6 +708,22 @@ public:
         textEdit->setPlaceholderText(QCoreApplication::translate("Interface", "Insert Text...", nullptr));
         send->setText(QString());
         attachment->setText(QString());
+        viewMail->setTitle(QString());
+        fromLabel->setText(QCoreApplication::translate("Interface", "From:", nullptr));
+        mailContent->setHtml(QCoreApplication::translate("Interface", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        fromText->setText(QCoreApplication::translate("Interface", "Expeditor", nullptr));
+        exitBtn->setText(QString());
+        forwardBtn->setText(QCoreApplication::translate("Interface", "Forward", nullptr));
+        forwardTo->setText(QString());
+        replyBtn->setText(QCoreApplication::translate("Interface", "Reply", nullptr));
+        replyTo->setText(QString());
     } // retranslateUi
 
 };

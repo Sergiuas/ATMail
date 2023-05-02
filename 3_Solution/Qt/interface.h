@@ -2,7 +2,7 @@
 #define INTERFACE_H
 
 #include <QDialog>
-
+#include <readmail.h>
 
 namespace Ui {
 class Interface;
@@ -25,6 +25,9 @@ private slots:
     void on_send_clicked();
 
     void mailSent(QString);
+    void openMail();
+
+    void on_exitBtn_clicked();
 
 private:
     Ui::Interface *ui;

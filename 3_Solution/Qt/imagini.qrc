@@ -42,5 +42,8 @@
         <file>Send.png</file>
         <file>mail.png</file>
         <file>mail_black.png</file>
+        <file>red_x.png</file>
+        <file>forwardTo.png</file>
+        <file>replyTo.png</file>
     </qresource>
 </RCC>
