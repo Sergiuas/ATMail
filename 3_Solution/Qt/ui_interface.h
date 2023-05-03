@@ -78,6 +78,8 @@ public:
     QLabel *forwardTo;
     QPushButton *replyBtn;
     QLabel *replyTo;
+    QScrollArea *scrollArea_2;
+    QWidget *filesArea;
 
     void setupUi(QDialog *Interface)
     {
@@ -406,6 +408,7 @@ public:
 "}"));
         dockWidget = new QDockWidget(Interface);
         dockWidget->setObjectName("dockWidget");
+        dockWidget->setEnabled(true);
         dockWidget->setGeometry(QRect(660, 130, 481, 481));
         dockWidget->setStyleSheet(QString::fromUtf8("#dockWidget\n"
 "{\n"
@@ -518,6 +521,7 @@ public:
         attachLine->raise();
         scrollArea = new QScrollArea(Interface);
         scrollArea->setObjectName("scrollArea");
+        scrollArea->setEnabled(true);
         scrollArea->setGeometry(QRect(338, 110, 801, 491));
         scrollArea->setStyleSheet(QString::fromUtf8("background-color: #242423"));
         scrollArea->setWidgetResizable(true);
@@ -531,6 +535,7 @@ public:
         scrollArea->setWidget(scrollZone);
         viewMail = new QGroupBox(Interface);
         viewMail->setObjectName("viewMail");
+        viewMail->setEnabled(true);
         viewMail->setGeometry(QRect(338, 110, 801, 491));
         viewMail->setStyleSheet(QString::fromUtf8("#viewMail\n"
 "{\n"
@@ -547,7 +552,7 @@ public:
 "}"));
         mailContent = new QTextEdit(viewMail);
         mailContent->setObjectName("mailContent");
-        mailContent->setGeometry(QRect(18, 100, 761, 371));
+        mailContent->setGeometry(QRect(18, 100, 761, 281));
         mailContent->setStyleSheet(QString::fromUtf8("#mailContent\n"
 "{\n"
 "	background-color:#1c1c1b;\n"
@@ -624,6 +629,19 @@ public:
 "border: none;\n"
 "background-repeat: none;\n"
 "}"));
+        scrollArea_2 = new QScrollArea(viewMail);
+        scrollArea_2->setObjectName("scrollArea_2");
+        scrollArea_2->setGeometry(QRect(20, 390, 761, 80));
+        scrollArea_2->setWidgetResizable(true);
+        filesArea = new QWidget();
+        filesArea->setObjectName("filesArea");
+        filesArea->setGeometry(QRect(0, 0, 759, 78));
+        filesArea->setStyleSheet(QString::fromUtf8("#filesArea\n"
+"{\n"
+"	background-color:#1c1c1b;\n"
+"	color:white;\n"
+"}"));
+        scrollArea_2->setWidget(filesArea);
         fromLabel->raise();
         fromText->raise();
         mailContent->raise();
@@ -632,6 +650,8 @@ public:
         forwardTo->raise();
         replyBtn->raise();
         replyTo->raise();
+        scrollArea_2->raise();
+        dockWidget->raise();
         area1->raise();
         pushButton->raise();
         Logo->raise();
@@ -661,7 +681,6 @@ public:
         label->raise();
         scrollArea->raise();
         viewMail->raise();
-        dockWidget->raise();
 
         retranslateUi(Interface);
         QObject::connect(compose, &QPushButton::clicked, dockWidget, qOverload<>(&QDockWidget::show));

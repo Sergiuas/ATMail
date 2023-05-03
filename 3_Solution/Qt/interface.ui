@@ -666,6 +666,9 @@ background-repeat: none;
    </property>
   </widget>
   <widget class="QDockWidget" name="dockWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>660</x>
@@ -911,6 +914,9 @@ background-repeat: none;
    </widget>
   </widget>
   <widget class="QScrollArea" name="scrollArea">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>338</x>
@@ -943,6 +949,9 @@ background-repeat: none;
    </widget>
   </widget>
   <widget class="QGroupBox" name="viewMail">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>338</x>
@@ -987,7 +996,7 @@ background-repeat: none;
       <x>18</x>
       <y>100</y>
       <width>761</width>
-      <height>371</height>
+      <height>281</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1162,6 +1171,36 @@ background-repeat: none;
      <string/>
     </property>
    </widget>
+   <widget class="QScrollArea" name="scrollArea_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>761</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="filesArea">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>759</width>
+       <height>78</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#filesArea
+{
+	background-color:#1c1c1b;
+	color:white;
+}</string>
+     </property>
+    </widget>
+   </widget>
    <zorder>fromLabel</zorder>
    <zorder>fromText</zorder>
    <zorder>mailContent</zorder>
@@ -1170,7 +1209,9 @@ background-repeat: none;
    <zorder>forwardTo</zorder>
    <zorder>replyBtn</zorder>
    <zorder>replyTo</zorder>
+   <zorder>scrollArea_2</zorder>
   </widget>
+  <zorder>dockWidget</zorder>
   <zorder>area1</zorder>
   <zorder>pushButton</zorder>
   <zorder>Logo</zorder>
@@ -1200,7 +1241,6 @@ background-repeat: none;
   <zorder>label</zorder>
   <zorder>scrollArea</zorder>
   <zorder>viewMail</zorder>
-  <zorder>dockWidget</zorder>
  </widget>
  <resources/>
  <connections>

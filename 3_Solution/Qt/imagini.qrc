@@ -45,5 +45,6 @@
         <file>red_x.png</file>
         <file>forwardTo.png</file>
         <file>replyTo.png</file>
+        <file>blackFile.png</file>
     </qresource>
 </RCC>
