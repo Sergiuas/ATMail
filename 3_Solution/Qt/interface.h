@@ -31,6 +31,8 @@ private slots:
 
     void downloadFile();
 
+    void performSearch(const QString &searchText);
+
     void on_exitBtn_clicked();
 
     void on_pushButton_clicked(int check);

@@ -27,6 +27,23 @@ void Interface::downloadFile()
 
 }
 
+//functia pentru search in mail
+void Interface::performSearch(const QString& searchText)
+{
+    for(QToolButton *button :buttonList)
+    {
+        if (button->text().contains(searchText, Qt::CaseInsensitive))
+        {
+            button->setVisible(true);
+        }
+
+        else
+        {
+            button->setVisible(false);
+        }
+    }
+}
+
 Interface::Interface(QString User,QString Email,QString Password, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Interface)
@@ -266,6 +283,7 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
         }
     });
 
+    connect(ui->search,&QLineEdit::textChanged,this,&Interface::performSearch); // pentru search
 
 
 }
@@ -289,7 +307,6 @@ void Interface::on_pushButton_8_clicked()
          mainWindow->show();
      }
      else{}
-
 }
 
 
@@ -469,23 +486,53 @@ void Interface::on_pushButton_2_clicked(int check)
 
 void Interface::on_pushButton_3_clicked(int check)
 {
+    //hardcodat
+
     if (check==0)
     {
-        for (int i = 0; i < 2 ; i++) {
-            QToolButton* button = new QToolButton();
-            QIcon icon(":mail.png");
+        QToolButton* button = new QToolButton();
+        QIcon icon(":mail.png");
 
-            button->setFixedSize(775,50);
-            //QPixmap pixmap = icon.pixmap(QSize(100, 100));
-            //QIcon resizedIcon(pixmap);
-            button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-            button->setText("Test\nSubject");
-            button->setIcon(icon);
-            button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
-            connect(button, &QToolButton::clicked, this, &Interface::openMail);
+        button->setFixedSize(775,50);
+        //QPixmap pixmap = icon.pixmap(QSize(100, 100));
+        //QIcon resizedIcon(pixmap);
+        button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        button->setText("Sergiu\nATM");
+        button->setIcon(icon);
+        button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+        connect(button, &QToolButton::clicked, this, &Interface::openMail);
 
-            buttonList.append(button);
-        }
+        buttonList.append(button);
+
+        //////////////////////////
+        QToolButton* button2 = new QToolButton();
+        //QIcon icon(":mail.png");
+
+        button2->setFixedSize(775,50);
+        //QPixmap pixmap = icon.pixmap(QSize(100, 100));
+        //QIcon resizedIcon(pixmap);
+        button2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        button2->setText("Dani\nCe faci?");
+        button2->setIcon(icon);
+        button2->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+        connect(button2, &QToolButton::clicked, this, &Interface::openMail);
+        buttonList.append(button2);
+        ////////////////////////////////
+        QToolButton* button3 = new QToolButton();
+        //QIcon icon(":mail.png");
+
+        button3->setFixedSize(775,50);
+        //QPixmap pixmap = icon.pixmap(QSize(100, 100));
+        //QIcon resizedIcon(pixmap);
+        button3->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        button3->setText("Sergiu\nFac bine");
+        button3->setIcon(icon);
+        button3->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+        connect(button3, &QToolButton::clicked, this, &Interface::openMail);
+
+
+
+        buttonList.append(button3);
 
         for(QToolButton *button :buttonList)
         {

@@ -1211,7 +1211,6 @@ background-repeat: none;
    <zorder>replyTo</zorder>
    <zorder>scrollArea_2</zorder>
   </widget>
-  <zorder>dockWidget</zorder>
   <zorder>area1</zorder>
   <zorder>pushButton</zorder>
   <zorder>Logo</zorder>
@@ -1241,6 +1240,7 @@ background-repeat: none;
   <zorder>label</zorder>
   <zorder>scrollArea</zorder>
   <zorder>viewMail</zorder>
+  <zorder>dockWidget</zorder>
  </widget>
  <resources/>
  <connections>

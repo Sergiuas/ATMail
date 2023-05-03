@@ -651,7 +651,6 @@ public:
         replyBtn->raise();
         replyTo->raise();
         scrollArea_2->raise();
-        dockWidget->raise();
         area1->raise();
         pushButton->raise();
         Logo->raise();
@@ -681,6 +680,7 @@ public:
         label->raise();
         scrollArea->raise();
         viewMail->raise();
+        dockWidget->raise();
 
         retranslateUi(Interface);
         QObject::connect(compose, &QPushButton::clicked, dockWidget, qOverload<>(&QDockWidget::show));
