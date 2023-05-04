@@ -53,6 +53,8 @@ private slots:
 
     void on_replyBtn_clicked();
 
+    void on_trashBtn_clicked();
+
 private:
     Ui::Interface *ui;
     QStringList files;

@@ -51,7 +51,10 @@ public:
         MainWindow->setSizePolicy(sizePolicy);
         MainWindow->setMinimumSize(QSize(464, 698));
         MainWindow->setMaximumSize(QSize(464, 698));
-        MainWindow->setStyleSheet(QString::fromUtf8(""));
+        MainWindow->setStyleSheet(QString::fromUtf8("#MainWindow\n"
+"{\n"
+"	background-image:url(:bg.jpg);\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         LoginBtn = new QPushButton(centralwidget);
@@ -125,10 +128,11 @@ public:
         textEditPassword->setFont(font1);
         textEditPassword->setStyleSheet(QString::fromUtf8("#textEditPassword\n"
 "{\n"
-"color:#fff;\n"
+"color:white;\n"
 "padding-right: 40px;\n"
 "border: 2px solid white;\n"
 "border-radius:10px;\n"
+"background-color: rgba(0,0,0,0.3);\n"
 "}\n"
 "\n"
 "#textEditPassword:focus\n"
@@ -143,10 +147,11 @@ public:
         textEditUserName->setFont(font1);
         textEditUserName->setStyleSheet(QString::fromUtf8("#textEditUserName\n"
 "{\n"
-"color:#fff;\n"
+"color:white;\n"
 "padding-right: 40px;\n"
 "border: 2px solid white;\n"
 "border-radius:10px;\n"
+"background-color: rgba(0,0,0,0.3);\n"
 "}\n"
 "#textEditUserName:focus\n"
 "{\n"

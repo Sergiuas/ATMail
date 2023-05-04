@@ -365,6 +365,19 @@ void Interface::on_pushButton_clicked(int check)
         //creare mail-uri (pana la cate vor fi)
         for (int i = 0; i < 7; i++) {
             QToolButton* button = new QToolButton();
+
+            //DE MODIFICAT
+//            if (citit)
+//            {
+//                QIcon icon(":openedMail.png");
+//            }
+
+//            else
+//            {
+//                QIcon icon(":mail.png");
+//            }
+
+
             QIcon icon(":mail.png");
 
             button->setFixedSize(775,50);
@@ -778,5 +791,11 @@ void Interface::on_forwardBtn_clicked()
 void Interface::on_replyBtn_clicked()
 {
     ui->dockWidget->show();
+}
+
+
+void Interface::on_trashBtn_clicked()
+{
+
 }
 

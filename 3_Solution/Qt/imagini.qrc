@@ -46,5 +46,6 @@
         <file>forwardTo.png</file>
         <file>replyTo.png</file>
         <file>blackFile.png</file>
+        <file>openedMail.png</file>
     </qresource>
 </RCC>

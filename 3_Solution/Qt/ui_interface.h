@@ -80,6 +80,7 @@ public:
     QLabel *replyTo;
     QScrollArea *scrollArea_2;
     QWidget *filesArea;
+    QPushButton *trashBtn;
 
     void setupUi(QDialog *Interface)
     {
@@ -642,6 +643,18 @@ public:
 "	color:white;\n"
 "}"));
         scrollArea_2->setWidget(filesArea);
+        trashBtn = new QPushButton(viewMail);
+        trashBtn->setObjectName("trashBtn");
+        trashBtn->setGeometry(QRect(756, 67, 21, 21));
+        trashBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        trashBtn->setStyleSheet(QString::fromUtf8("#trashBtn {\n"
+"background-color: transparent;\n"
+"border-image: url(:trash.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        trashBtn->setAutoDefault(true);
         fromLabel->raise();
         fromText->raise();
         mailContent->raise();
@@ -651,6 +664,7 @@ public:
         replyBtn->raise();
         replyTo->raise();
         scrollArea_2->raise();
+        trashBtn->raise();
         area1->raise();
         pushButton->raise();
         Logo->raise();
@@ -688,6 +702,7 @@ public:
         send->setDefault(true);
         attachment->setDefault(true);
         exitBtn->setDefault(true);
+        trashBtn->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(Interface);
@@ -743,6 +758,7 @@ public:
         forwardTo->setText(QString());
         replyBtn->setText(QCoreApplication::translate("Interface", "Reply", nullptr));
         replyTo->setText(QString());
+        trashBtn->setText(QString());
     } // retranslateUi
 
 };

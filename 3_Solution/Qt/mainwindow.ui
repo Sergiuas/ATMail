@@ -32,7 +32,10 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">#MainWindow
+{
+	background-image:url(:bg.jpg);
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="LoginBtn">
@@ -190,10 +193,11 @@ background:none;
     <property name="styleSheet">
      <string notr="true">#textEditPassword
 {
-color:#fff;
+color:white;
 padding-right: 40px;
 border: 2px solid white;
 border-radius:10px;
+background-color: rgba(0,0,0,0.3);
 }
 
 #textEditPassword:focus
@@ -228,10 +232,11 @@ border: 2px solid yellow;
     <property name="styleSheet">
      <string notr="true">#textEditUserName
 {
-color:#fff;
+color:white;
 padding-right: 40px;
 border: 2px solid white;
 border-radius:10px;
+background-color: rgba(0,0,0,0.3);
 }
 #textEditUserName:focus
 {

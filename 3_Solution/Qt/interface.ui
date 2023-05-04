@@ -1201,6 +1201,37 @@ background-repeat: none;
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="trashBtn">
+    <property name="geometry">
+     <rect>
+      <x>756</x>
+      <y>67</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#trashBtn {
+background-color: transparent;
+border-image: url(:trash.png);
+background: none;
+border: none;
+background-repeat: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>fromLabel</zorder>
    <zorder>fromText</zorder>
    <zorder>mailContent</zorder>
@@ -1210,6 +1241,7 @@ background-repeat: none;
    <zorder>replyBtn</zorder>
    <zorder>replyTo</zorder>
    <zorder>scrollArea_2</zorder>
+   <zorder>trashBtn</zorder>
   </widget>
   <zorder>area1</zorder>
   <zorder>pushButton</zorder>
