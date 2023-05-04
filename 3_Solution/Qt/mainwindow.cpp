@@ -36,11 +36,11 @@ MainWindow::MainWindow(QWidget *parent)
     }
     in.close();
 
-//    hide();
-//    Interface *mailInterface=new Interface("test","ceva@gmail.com","dada");
-//    mailInterface->setWindowIcon(QIcon(":Logo.png"));
-//    mailInterface->setWindowTitle("ATMail");
-//    mailInterface->show();
+    hide();
+    Interface *mailInterface=new Interface("test","ceva@gmail.com","dada");
+    mailInterface->setWindowIcon(QIcon(":Logo.png"));
+    mailInterface->setWindowTitle("ATMail");
+    mailInterface->show();
 
 }
 

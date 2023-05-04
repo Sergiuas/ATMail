@@ -768,3 +768,15 @@ void Interface::on_pushButton_7_clicked(int check)
 
 }
 
+
+void Interface::on_forwardBtn_clicked()
+{
+    ui->dockWidget->show();
+}
+
+
+void Interface::on_replyBtn_clicked()
+{
+    ui->dockWidget->show();
+}
+

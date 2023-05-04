@@ -49,6 +49,10 @@ private slots:
 
     void on_pushButton_7_clicked(int check);
 
+    void on_forwardBtn_clicked();
+
+    void on_replyBtn_clicked();
+
 private:
     Ui::Interface *ui;
     QStringList files;

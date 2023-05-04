@@ -1371,56 +1371,6 @@ release\interface.obj: interface.cpp interface.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qtoolbutton.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		ui_interface.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qjnitypes.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfutureinterface.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qmutex.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qtsan_impl.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qresultstore.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture_impl.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthreadpool.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthread.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qrunnable.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qexception.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qpromise.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qlocale.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qguiapplication_platform.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QCheckBox \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QDockWidget \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qdockwidget.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QGroupBox \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qpicture.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextdocument.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QTextEdit \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qtextedit.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QWidget \
 		mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qmainwindow.h \
@@ -1437,6 +1387,7 @@ release\interface.obj: interface.cpp interface.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdatetime.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcalendar.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qlocale.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QMessageBox \
 		smtp.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtNetwork\QAbstractSocket \
@@ -1766,52 +1717,6 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qdialog.h \
 		ui_mainwindow.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qjnitypes.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfutureinterface.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qmutex.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qtsan_impl.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qresultstore.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture_impl.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthreadpool.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthread.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qrunnable.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qexception.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qpromise.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qlocale.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qguiapplication_platform.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QCheckBox \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qpicture.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextdocument.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QMenuBar \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qmenubar.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qmenu.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QStatusBar \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qstatusbar.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QWidget \
 		registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QDialog \
 		interface.h \
@@ -1823,6 +1728,7 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		dbconnection.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtSql\QtSql \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtSql\QtSqlDepends \
@@ -1834,12 +1740,29 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\q23functional.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractanimation.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractnativeeventfilter.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractproxymodel.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qanimationgroup.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qapplicationstatic.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QMutex \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qtsan_impl.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qjnitypes.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfutureinterface.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qresultstore.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture_impl.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthreadpool.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthread.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qrunnable.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qexception.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qpromise.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qassociativeiterable.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qbitarray.h \
@@ -1847,6 +1770,7 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcache.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcalendar.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qlocale.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcborarray.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcborvalue.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdatetime.h \
@@ -1939,6 +1863,7 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qurlquery.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qvarianthash.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QHash \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qvariantlist.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qvariantmap.h \
@@ -1973,6 +1898,7 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qstyle.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qtabbar.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlistview.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
@@ -2124,46 +2050,6 @@ release\registerwindow.obj: registerwindow.cpp registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qnativeinterface.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qmessagebox.h \
 		ui_registerwindow.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qjnitypes.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfutureinterface.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qmutex.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qtsan_impl.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qresultstore.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture_impl.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthreadpool.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthread.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qrunnable.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qexception.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qpromise.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qlocale.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qguiapplication_platform.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QCheckBox \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qpicture.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextdocument.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
 		mainwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qmainwindow.h \
@@ -2177,6 +2063,7 @@ release\registerwindow.obj: registerwindow.cpp registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QHBoxLayout \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		dbconnection.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtSql\QtSql \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtSql\QtSqlDepends \
@@ -2188,12 +2075,29 @@ release\registerwindow.obj: registerwindow.cpp registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\q23functional.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractanimation.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractnativeeventfilter.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qabstractproxymodel.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qanimationgroup.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qapplicationstatic.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QMutex \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qtsan_impl.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qjnitypes.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfutureinterface.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qresultstore.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qfuture_impl.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthreadpool.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qthread.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qrunnable.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qexception.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qpromise.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qassociativeiterable.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qbitarray.h \
@@ -2201,6 +2105,7 @@ release\registerwindow.obj: registerwindow.cpp registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcache.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcalendar.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qlocale.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcborarray.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qcborvalue.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qdatetime.h \
@@ -2293,6 +2198,7 @@ release\registerwindow.obj: registerwindow.cpp registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qurlquery.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qvarianthash.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QHash \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\QString \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qvariantlist.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtCore\qvariantmap.h \
@@ -2327,6 +2233,7 @@ release\registerwindow.obj: registerwindow.cpp registerwindow.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qstyle.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qtabbar.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qlistview.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
 		..\..\..\..\Qt\6.4.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
