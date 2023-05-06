@@ -47,5 +47,11 @@
         <file>replyTo.png</file>
         <file>blackFile.png</file>
         <file>openedMail.png</file>
+        <file>favorite.png</file>
+        <file>favorite_white.png</file>
+        <file>favorite_yellow.png</file>
+        <file>gear.png</file>
+        <file>gear_white.png</file>
+        <file>gear_transparent.png</file>
     </qresource>
 </RCC>

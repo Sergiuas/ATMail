@@ -55,6 +55,11 @@ private slots:
 
     void on_trashBtn_clicked();
 
+    //nou
+    void on_favorite_clicked();
+
+    void on_settings_clicked();
+
 private:
     Ui::Interface *ui;
     QStringList files;

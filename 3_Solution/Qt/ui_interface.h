@@ -81,6 +81,8 @@ public:
     QScrollArea *scrollArea_2;
     QWidget *filesArea;
     QPushButton *trashBtn;
+    QPushButton *favorite;
+    QPushButton *settings;
 
     void setupUi(QDialog *Interface)
     {
@@ -655,6 +657,18 @@ public:
 "background-repeat: none;\n"
 "}"));
         trashBtn->setAutoDefault(true);
+        favorite = new QPushButton(viewMail);
+        favorite->setObjectName("favorite");
+        favorite->setGeometry(QRect(711, 66, 20, 20));
+        favorite->setCursor(QCursor(Qt::PointingHandCursor));
+        favorite->setStyleSheet(QString::fromUtf8("#favorite {\n"
+"background-color: transparent;\n"
+"border-image: url(:favorite_white.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        favorite->setAutoDefault(true);
         fromLabel->raise();
         fromText->raise();
         mailContent->raise();
@@ -665,6 +679,20 @@ public:
         replyTo->raise();
         scrollArea_2->raise();
         trashBtn->raise();
+        favorite->raise();
+        settings = new QPushButton(Interface);
+        settings->setObjectName("settings");
+        settings->setGeometry(QRect(161, 93, 43, 40));
+        settings->setCursor(QCursor(Qt::PointingHandCursor));
+        settings->setStyleSheet(QString::fromUtf8("#settings {\n"
+"background-color: transparent;\n"
+"border-image: url(:gear_white.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        settings->setAutoDefault(true);
+        dockWidget->raise();
         area1->raise();
         pushButton->raise();
         Logo->raise();
@@ -694,7 +722,7 @@ public:
         label->raise();
         scrollArea->raise();
         viewMail->raise();
-        dockWidget->raise();
+        settings->raise();
 
         retranslateUi(Interface);
         QObject::connect(compose, &QPushButton::clicked, dockWidget, qOverload<>(&QDockWidget::show));
@@ -703,6 +731,8 @@ public:
         attachment->setDefault(true);
         exitBtn->setDefault(true);
         trashBtn->setDefault(true);
+        favorite->setDefault(true);
+        settings->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(Interface);
@@ -759,6 +789,8 @@ public:
         replyBtn->setText(QCoreApplication::translate("Interface", "Reply", nullptr));
         replyTo->setText(QString());
         trashBtn->setText(QString());
+        favorite->setText(QString());
+        settings->setText(QString());
     } // retranslateUi
 
 };

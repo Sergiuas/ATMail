@@ -11,6 +11,7 @@
 #include "QPixmap"
 #include "QIcon"
 #include <QButtonGroup>
+#include "settingswindow.h"
 
 
 using namespace std;
@@ -797,5 +798,18 @@ void Interface::on_replyBtn_clicked()
 void Interface::on_trashBtn_clicked()
 {
 
+}
+
+//nou
+void Interface::on_favorite_clicked()
+{
+    ui->favorite->setStyleSheet("#favorite {background-color: transparent; border-image: url(:favorite_yellow.png); background: none; border: none; background-repeat: none;}");
+}
+
+//nou
+void Interface::on_settings_clicked()
+{
+   SettingsWindow* settingswindow= new SettingsWindow;
+   settingswindow->show();
 }
 

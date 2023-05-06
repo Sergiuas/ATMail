@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     registerwindow.cpp \
+    settingswindow.cpp \
     smtp.cpp
 
 HEADERS += \
@@ -21,12 +22,14 @@ HEADERS += \
     interface.h \
     mainwindow.h \
     registerwindow.h \
+    settingswindow.h \
     smtp.h
 
 FORMS += \
     interface.ui \
     mainwindow.ui \
-    registerwindow.ui
+    registerwindow.ui \
+    settingswindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
