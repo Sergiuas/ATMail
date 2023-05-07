@@ -19,8 +19,67 @@ using namespace std;
 void Interface::openMail()
 {
     ui->scrollArea->hide();
+    for(QToolButton *folder :folderList)
+    {
+        ui->dropDown->addItem(folder->text()); //nou
+    }
     ui->viewMail->show();
     ui->mailContent->setReadOnly(true);
+}
+
+void Interface::openFolder()
+{
+    for (int i = 0; i < 7; i++) {
+        QToolButton* button = new QToolButton();
+
+        //DE MODIFICAT
+//            if (citit)
+//            {
+//                QIcon icon(":openedMail.png");
+//            }
+
+//            else
+//            {
+//                QIcon icon(":mail.png");
+//            }
+
+
+        QIcon icon(":mail.png");
+
+        button->setFixedSize(775,50);
+        //QPixmap pixmap = icon.pixmap(QSize(100, 100));
+        //QIcon resizedIcon(pixmap);
+        button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        button->setText("Test\nSubject");
+        button->setIcon(icon);
+        button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+        connect(button, &QToolButton::clicked, this, &Interface::openMail);
+
+        buttonList.append(button);
+    }
+
+    for(QToolButton *button :buttonList)
+    {
+        layout->addWidget(button);
+    }
+
+    //pt fisiere
+    for (int i = 0; i < 2; ++i) {
+        QToolButton* file = new QToolButton;
+        file->setIcon(QIcon(":blackFile.png"));
+        file->setIconSize(QSize(32, 32));
+        file->setText("File.txt");
+        file->setStyleSheet("text-align:center;");
+        file->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+        connect(file, &QToolButton::clicked, this, &Interface::downloadFile);
+
+        filesList.append(file);
+    }
+
+    for(QToolButton *button :filesList)
+    {
+        filesLayout->addWidget(button);
+    }
 }
 
 void Interface::downloadFile()
@@ -45,6 +104,22 @@ void Interface::performSearch(const QString& searchText)
     }
 }
 
+void Interface::performFolderSearch(const QString& searchText)
+{
+    for(QToolButton *folder :folderList)
+    {
+        if (folder->text().contains(searchText, Qt::CaseInsensitive))
+        {
+            folder->setVisible(true);
+        }
+
+        else
+        {
+            folder->setVisible(false);
+        }
+    }
+}
+
 Interface::Interface(QString User,QString Email,QString Password, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Interface)
@@ -63,9 +138,6 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->pushButton_2->setStyleSheet("QPushButton#pushButton_2:hover{background-color:#dbdbdb;}QPushButton#pushButton_2{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
             ui->pushButton_3->setStyleSheet("QPushButton#pushButton_3:hover{background-color:#dbdbdb;}QPushButton#pushButton_3{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
             ui->pushButton_4->setStyleSheet("QPushButton#pushButton_4:hover{background-color:#dbdbdb;}QPushButton#pushButton_4{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
-            ui->pushButton_5->setStyleSheet("QPushButton#pushButton_5:hover{background-color:#dbdbdb;}QPushButton#pushButton_5{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
-            ui->pushButton_6->setStyleSheet("QPushButton#pushButton_6:hover{background-color:#dbdbdb;}QPushButton#pushButton_6{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
-            ui->pushButton_7->setStyleSheet("QPushButton#pushButton_7:hover{background-color:#dbdbdb;}QPushButton#pushButton_7{background-color: transparent;border-radius: 20px; color: black; text-align: left; padding-left: 50px;}");
             ui->area1->setStyleSheet("background-color:#9e9e9e;");
             ui->area2->setStyleSheet("background-color:#c2c2c2;");
             ui->label->setStyleSheet("color:black;");
@@ -84,9 +156,7 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->pushButton_2->setStyleSheet("QPushButton#pushButton_2:hover{background-color:#363634;}QPushButton#pushButton_2{background-color: transparent;border-radius: 20px; color: white; text-align: left; padding-left: 50px;}");
             ui->pushButton_3->setStyleSheet("QPushButton#pushButton_3:hover{background-color:#363634;}QPushButton#pushButton_3{background-color: transparent;border-radius: 20px; color: white; text-align: left; padding-left: 50px;}");
             ui->pushButton_4->setStyleSheet("QPushButton#pushButton_4:hover{background-color:#363634;}QPushButton#pushButton_4{background-color: transparent;border-radius: 20px; color: white; text-align: left; padding-left: 50px;}");
-            ui->pushButton_5->setStyleSheet("QPushButton#pushButton_5:hover{background-color:#363634;}QPushButton#pushButton_5{background-color: transparent;border-radius: 20px; color: white; text-align: left; padding-left: 50px;}");
-            ui->pushButton_6->setStyleSheet("QPushButton#pushButton_6:hover{background-color:#363634;}QPushButton#pushButton_6{background-color: transparent;border-radius: 20px; color: white; text-align: left; padding-left: 50px;}");
-            ui->pushButton_7->setStyleSheet("QPushButton#pushButton_7:hover{background-color:#363634;}QPushButton#pushButton_7{background-color: transparent;border-radius: 20px; color: white; text-align: left; padding-left: 50px;}");
+
             ui->area1->setStyleSheet("background-color:#242423");
             ui->area2->setStyleSheet("background-color:#1c1c1b;");
             ui->label->setStyleSheet("color:white;");
@@ -108,14 +178,22 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
     this->filesLayout->setSpacing(10);
     this->filesLayout->setContentsMargins(10,10,10,10);
 
+    this->folderLayout = new QVBoxLayout(ui->folderZone);
+    this->folderLayout->setAlignment(Qt::AlignTop);
+    this->folderLayout->setSpacing(10);
+    this->folderLayout->setContentsMargins(10,10,10,10);
+
     ui->dockWidget->hide();
     ui->dockWidget->setWindowTitle("New Message");
     ui->user->setText(User);
     this->Email=Email;
     this->Password=Password;
     ui->viewMail->hide();
+    ui->createFolderWindow->hide(); // nou
 
     ui->search->setClearButtonEnabled(true);
+
+    ui->dropDown->addItem(""); //nou
 
     QButtonGroup *buttonGroup = new QButtonGroup;
     buttonGroup->setExclusive(true);
@@ -123,17 +201,13 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
     ui->pushButton_2->setCheckable(true);
     ui->pushButton_3->setCheckable(true);
     ui->pushButton_4->setCheckable(true);
-    ui->pushButton_5->setCheckable(true);
-    ui->pushButton_6->setCheckable(true);
-    ui->pushButton_7->setCheckable(true);
+
 
     buttonGroup->addButton(ui->pushButton);
     buttonGroup->addButton(ui->pushButton_2);
     buttonGroup->addButton(ui->pushButton_3);
     buttonGroup->addButton(ui->pushButton_4);
-    buttonGroup->addButton(ui->pushButton_5);
-    buttonGroup->addButton(ui->pushButton_6);
-    buttonGroup->addButton(ui->pushButton_7);
+
 
     connect(ui->pushButton, &QPushButton::toggled, [=](bool checked) {
         if (ui->pushButton->isChecked()) {
@@ -141,15 +215,11 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->pushButton_2->setChecked(false);
             ui->pushButton_3->setChecked(false);
             ui->pushButton_4->setChecked(false);
-            ui->pushButton_5->setChecked(false);
-            ui->pushButton_6->setChecked(false);
-            ui->pushButton_7->setChecked(false);
+
             this->on_pushButton_2_clicked(1);
             this->on_pushButton_3_clicked(1);
             this->on_pushButton_4_clicked(1);
-            this->on_pushButton_5_clicked(1);
-            this->on_pushButton_6_clicked(1);
-            this->on_pushButton_7_clicked(1);
+
             this->on_pushButton_clicked(0);
         } else {
             ui->pushButton->setStyleSheet("#pushButton {background-color: transparent; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;} #pushButton:hover{background-color: #363634;}");
@@ -162,15 +232,11 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->pushButton->setChecked(false);
             ui->pushButton_3->setChecked(false);
             ui->pushButton_4->setChecked(false);
-            ui->pushButton_5->setChecked(false);
-            ui->pushButton_6->setChecked(false);
-            ui->pushButton_7->setChecked(false);
+
             this->on_pushButton_clicked(1);
             this->on_pushButton_3_clicked(1);
             this->on_pushButton_4_clicked(1);
-            this->on_pushButton_5_clicked(1);
-            this->on_pushButton_6_clicked(1);
-            this->on_pushButton_7_clicked(1);
+
             this->on_pushButton_2_clicked(0);
         } else {
             ui->pushButton_2->setStyleSheet("#pushButton_2 {background-color: transparent; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;} #pushButton_2:hover{background-color: #363634;}");
@@ -183,15 +249,11 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->pushButton_2->setChecked(false);
             ui->pushButton->setChecked(false);
             ui->pushButton_4->setChecked(false);
-            ui->pushButton_5->setChecked(false);
-            ui->pushButton_6->setChecked(false);
-            ui->pushButton_7->setChecked(false);
+
             this->on_pushButton_clicked(1);
             this->on_pushButton_2_clicked(1);
             this->on_pushButton_4_clicked(1);
-            this->on_pushButton_5_clicked(1);
-            this->on_pushButton_6_clicked(1);
-            this->on_pushButton_7_clicked(1);
+
             this->on_pushButton_3_clicked(0);
 
         } else {
@@ -205,86 +267,20 @@ Interface::Interface(QString User,QString Email,QString Password, QWidget *paren
             ui->pushButton_2->setChecked(false);
             ui->pushButton_3->setChecked(false);
             ui->pushButton->setChecked(false);
-            ui->pushButton_5->setChecked(false);
-            ui->pushButton_6->setChecked(false);
-            ui->pushButton_7->setChecked(false);
+
             this->on_pushButton_clicked(1);
             this->on_pushButton_2_clicked(1);
             this->on_pushButton_3_clicked(1);
-            this->on_pushButton_5_clicked(1);
-            this->on_pushButton_6_clicked(1);
-            this->on_pushButton_7_clicked(1);
+
             this->on_pushButton_4_clicked(0);
         } else {
             ui->pushButton_4->setStyleSheet("#pushButton_4 {background-color: transparent; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;} #pushButton_4:hover{background-color: #363634;}");
         }
     });
 
-    connect(ui->pushButton_5, &QPushButton::toggled, [=](bool checked) {
-        if (ui->pushButton_5->isChecked()) {
-            ui->pushButton_5->setStyleSheet("#pushButton_5 {background-color: #363634; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;}");
-            ui->pushButton_2->setChecked(false);
-            ui->pushButton_3->setChecked(false);
-            ui->pushButton_4->setChecked(false);
-            ui->pushButton->setChecked(false);
-            ui->pushButton_6->setChecked(false);
-            ui->pushButton_7->setChecked(false);
-            this->on_pushButton_clicked(1);
-            this->on_pushButton_2_clicked(1);
-            this->on_pushButton_3_clicked(1);
-            this->on_pushButton_4_clicked(1);
-            this->on_pushButton_6_clicked(1);
-            this->on_pushButton_7_clicked(1);
-            this->on_pushButton_5_clicked(0);
-        } else {
-            ui->pushButton_5->setStyleSheet("#pushButton_5 {background-color: transparent; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;} #pushButton_5:hover{background-color: #363634;}");
-        }
-    });
-
-    connect(ui->pushButton_6, &QPushButton::toggled, [=](bool checked) {
-        if (ui->pushButton_6->isChecked()) {
-            ui->pushButton_6->setStyleSheet("#pushButton_6 {background-color: #363634; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;}");
-            ui->pushButton_2->setChecked(false);
-            ui->pushButton_3->setChecked(false);
-            ui->pushButton_4->setChecked(false);
-            ui->pushButton_5->setChecked(false);
-            ui->pushButton->setChecked(false);
-            ui->pushButton_7->setChecked(false);
-            this->on_pushButton_clicked(1);
-            this->on_pushButton_2_clicked(1);
-            this->on_pushButton_3_clicked(1);
-            this->on_pushButton_4_clicked(1);
-            this->on_pushButton_5_clicked(1);
-            this->on_pushButton_7_clicked(1);
-            this->on_pushButton_6_clicked(0);
-        } else {
-            ui->pushButton_6->setStyleSheet("#pushButton_6 {background-color: transparent; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;} #pushButton_6:hover{background-color: #363634;}");
-        }
-    });
-
-
-    connect(ui->pushButton_7, &QPushButton::toggled, [=](bool checked) {
-        if (ui->pushButton_7->isChecked()) {
-            ui->pushButton_7->setStyleSheet("#pushButton_7 {background-color: #363634; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;}");
-            ui->pushButton_2->setChecked(false);
-            ui->pushButton_3->setChecked(false);
-            ui->pushButton_4->setChecked(false);
-            ui->pushButton_5->setChecked(false);
-            ui->pushButton_6->setChecked(false);
-            ui->pushButton->setChecked(false);
-            this->on_pushButton_clicked(1);
-            this->on_pushButton_2_clicked(1);
-            this->on_pushButton_3_clicked(1);
-            this->on_pushButton_4_clicked(1);
-            this->on_pushButton_5_clicked(1);
-            this->on_pushButton_6_clicked(1);
-            this->on_pushButton_7_clicked(0);
-        } else {
-            ui->pushButton_7->setStyleSheet("#pushButton_7 {background-color: transparent; border-radius: 20px;color: #fff; text-align: left;padding-left: 50px;} #pushButton_7:hover{background-color: #363634;}");
-        }
-    });
 
     connect(ui->search,&QLineEdit::textChanged,this,&Interface::performSearch); // pentru search
+    connect(ui->search_2,&QLineEdit::textChanged,this,&Interface::performFolderSearch);
 
 
 }
@@ -630,157 +626,6 @@ void Interface::on_pushButton_4_clicked(int check)
 }
 
 
-void Interface::on_pushButton_5_clicked(int check)
-{
-    if (check==0)
-    {
-        for (int i = 0; i < 9 ; i++) {
-            QToolButton* button = new QToolButton();
-            QIcon icon(":mail.png");
-
-            button->setFixedSize(775,50);
-            //QPixmap pixmap = icon.pixmap(QSize(100, 100));
-            //QIcon resizedIcon(pixmap);
-            button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-            button->setText("Test\nSubject");
-            button->setIcon(icon);
-            button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
-            connect(button, &QToolButton::clicked, this, &Interface::openMail);
-
-            buttonList.append(button);
-        }
-
-        for(QToolButton *button :buttonList)
-        {
-            layout->addWidget(button);
-        }
-
-
-    }
-
-    if (check==1)
-    {
-        if (layout==nullptr)
-        {
-            return;
-        }
-
-        else
-        {
-            for(QToolButton *button :buttonList)
-            {
-                layout->removeWidget(button);
-                delete button;
-            }
-
-
-        }
-        buttonList.clear();
-    }
-
-}
-
-
-void Interface::on_pushButton_6_clicked(int check)
-{
-    if (check==0)
-    {
-        for (int i = 0; i < 11 ; i++) {
-            QToolButton* button = new QToolButton();
-            QIcon icon(":mail.png");
-
-            button->setFixedSize(775,50);
-            //QPixmap pixmap = icon.pixmap(QSize(100, 100));
-            //QIcon resizedIcon(pixmap);
-            button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-            button->setText("Test\nSubject");
-            button->setIcon(icon);
-            button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
-            connect(button, &QToolButton::clicked, this, &Interface::openMail);
-
-            buttonList.append(button);
-        }
-
-        for(QToolButton *button :buttonList)
-        {
-            layout->addWidget(button);
-        }
-
-
-    }
-
-    if (check==1)
-    {
-        if (layout==nullptr)
-        {
-            return;
-        }
-
-        else
-        {
-            for(QToolButton *button :buttonList)
-            {
-                layout->removeWidget(button);
-                delete button;
-            }
-
-
-        }
-        buttonList.clear();
-    }
-
-}
-
-
-void Interface::on_pushButton_7_clicked(int check)
-{
-    if (check==0)
-    {
-        for (int i = 0; i < 4 ; i++) {
-            QToolButton* button = new QToolButton();
-            QIcon icon(":mail.png");
-
-            button->setFixedSize(775,50);
-            //QPixmap pixmap = icon.pixmap(QSize(100, 100));
-            //QIcon resizedIcon(pixmap);
-            button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-            button->setText("Test\nSubject");
-            button->setIcon(icon);
-            button->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
-            connect(button, &QToolButton::clicked, this, &Interface::openMail);
-
-            buttonList.append(button);
-        }
-
-        for(QToolButton *button :buttonList)
-        {
-            layout->addWidget(button);
-        }
-
-
-    }
-
-    if (check==1)
-    {
-        if (layout==nullptr)
-        {
-            return;
-        }
-
-        else
-        {
-            for(QToolButton *button :buttonList)
-            {
-                layout->removeWidget(button);
-                delete button;
-            }
-
-
-        }
-        buttonList.clear();
-    }
-
-}
 
 
 void Interface::on_forwardBtn_clicked()
@@ -811,5 +656,51 @@ void Interface::on_settings_clicked()
 {
    SettingsWindow* settingswindow= new SettingsWindow;
    settingswindow->show();
+}
+
+
+void Interface::on_addFolder_clicked()
+{
+    ui->createFolderWindow->show();
+}
+
+
+void Interface::on_addBtn_clicked()
+{
+
+    ui->createFolderWindow->hide();
+    QToolButton* folder= new QToolButton;
+    QIcon icon(":folder_yellow.png");
+    folder->setFixedSize(290,35);
+    folder->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    folder->setText(ui->editName->text());
+    ui->editName->clear();
+    folder->setIcon(icon);
+    folder->setStyleSheet("QToolButton {   background-color: #40403e; border-radius: 5px; color: #fff; } QToolButton:hover { background-color: #4f4f4d} QToolButton:pressed {background-color: #373778;} ");
+    connect(folder, &QToolButton::clicked, this, &Interface::openFolder);
+    folderLayout->addWidget(folder);
+    folderList.append(folder);
+
+}
+
+
+void Interface::on_exitBtn_2_clicked()
+{
+    ui->createFolderWindow->hide();
+    ui->editName->clear();
+}
+
+
+
+void Interface::on_dropDown_currentTextChanged(const QString &arg1)
+{
+    for(QToolButton *folder :folderList)
+    {
+        if (folder->text()==arg1)
+        {
+            //TODO: se adauga intr-o lista gen list.append(...)
+
+        }
+    }
 }
 

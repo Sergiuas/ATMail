@@ -29,9 +29,12 @@ private slots:
 
     void openMail();
 
+    void openFolder();
+
     void downloadFile();
 
     void performSearch(const QString &searchText);
+    void performFolderSearch(const QString &searchText);
 
     void on_exitBtn_clicked();
 
@@ -43,11 +46,6 @@ private slots:
 
     void on_pushButton_4_clicked(int check);
 
-    void on_pushButton_5_clicked(int check);
-
-    void on_pushButton_6_clicked(int check);
-
-    void on_pushButton_7_clicked(int check);
 
     void on_forwardBtn_clicked();
 
@@ -60,6 +58,14 @@ private slots:
 
     void on_settings_clicked();
 
+    void on_addFolder_clicked();
+
+    void on_addBtn_clicked();
+
+    void on_exitBtn_2_clicked();
+
+    void on_dropDown_currentTextChanged(const QString &arg1);
+
 private:
     Ui::Interface *ui;
     QStringList files;
@@ -69,6 +75,8 @@ private:
     QList <QToolButton*> buttonList;
     QHBoxLayout* filesLayout;
     QList <QToolButton*> filesList;
+    QVBoxLayout* folderLayout;
+    QList <QToolButton*> folderList;
 };
 
 #endif // INTERFACE_H

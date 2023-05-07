@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDockWidget>
 #include <QtWidgets/QFrame>
@@ -42,12 +43,6 @@ public:
     QFrame *line;
     QFrame *line_2;
     QFrame *line_3;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
-    QLabel *work;
-    QLabel *personal;
-    QLabel *credit;
     QLineEdit *search;
     QLabel *find;
     QCheckBox *sw;
@@ -82,13 +77,26 @@ public:
     QWidget *filesArea;
     QPushButton *trashBtn;
     QPushButton *favorite;
+    QComboBox *dropDown;
     QPushButton *settings;
+    QScrollArea *folderArea;
+    QWidget *folderZone;
+    QPushButton *addFolder;
+    QGroupBox *createFolderWindow;
+    QLabel *addLabel;
+    QLineEdit *editName;
+    QPushButton *addBtn;
+    QPushButton *exitBtn_2;
+    QLabel *find_2;
+    QLineEdit *search_2;
 
     void setupUi(QDialog *Interface)
     {
         if (Interface->objectName().isEmpty())
             Interface->setObjectName("Interface");
         Interface->resize(1146, 615);
+        Interface->setMinimumSize(QSize(1146, 615));
+        Interface->setMaximumSize(QSize(1146, 615));
         area1 = new QLabel(Interface);
         area1->setObjectName("area1");
         area1->setGeometry(QRect(0, 0, 331, 621));
@@ -240,90 +248,6 @@ public:
         line_3->setGeometry(QRect(320, 0, 20, 641));
         line_3->setFrameShape(QFrame::VLine);
         line_3->setFrameShadow(QFrame::Sunken);
-        pushButton_5 = new QPushButton(Interface);
-        pushButton_5->setObjectName("pushButton_5");
-        pushButton_5->setGeometry(QRect(20, 430, 241, 41));
-        pushButton_5->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_5->setStyleSheet(QString::fromUtf8("#pushButton_5\n"
-"{\n"
-"        \n"
-"        background-color: transparent;\n"
-"		border-radius: 20px;\n"
-"        color: #fff;\n"
-"		text-align: left;\n"
-"		padding-left: 50px;\n"
-"}\n"
-"\n"
-"#pushButton_5:hover\n"
-"{\n"
-"background-color:#363634;\n"
-"}"));
-        pushButton_6 = new QPushButton(Interface);
-        pushButton_6->setObjectName("pushButton_6");
-        pushButton_6->setGeometry(QRect(20, 485, 241, 41));
-        pushButton_6->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_6->setStyleSheet(QString::fromUtf8("#pushButton_6\n"
-"{\n"
-"        \n"
-"        background-color: transparent;\n"
-"		border-radius: 20px;\n"
-"        color: #fff;\n"
-"		text-align: left;\n"
-"		padding-left: 50px;\n"
-"}\n"
-"\n"
-"#pushButton_6:hover\n"
-"{\n"
-"background-color:#363634;\n"
-"}"));
-        pushButton_7 = new QPushButton(Interface);
-        pushButton_7->setObjectName("pushButton_7");
-        pushButton_7->setGeometry(QRect(20, 540, 241, 41));
-        pushButton_7->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_7->setStyleSheet(QString::fromUtf8("#pushButton_7\n"
-"{\n"
-"        \n"
-"        background-color: transparent;\n"
-"		border-radius: 20px;\n"
-"        color: #fff;\n"
-"		text-align: left;\n"
-"		padding-left: 50px;\n"
-"}\n"
-"\n"
-"#pushButton_7:hover\n"
-"{\n"
-"background-color:#363634;\n"
-"}"));
-        work = new QLabel(Interface);
-        work->setObjectName("work");
-        work->setGeometry(QRect(30, 436, 31, 31));
-        work->setStyleSheet(QString::fromUtf8("#work {\n"
-"background-color: transparent;\n"
-"border-image: url(:folder_blue.png);\n"
-"background: none;\n"
-"border: none;\n"
-"background-repeat: none;\n"
-"}"));
-        personal = new QLabel(Interface);
-        personal->setObjectName("personal");
-        personal->setGeometry(QRect(30, 490, 31, 31));
-        personal->setStyleSheet(QString::fromUtf8("#personal {\n"
-"background-color: transparent;\n"
-"border-image: url(:folder_yellow.png);\n"
-"background: none;\n"
-"border: none;\n"
-"background-repeat: none;\n"
-"}"));
-        credit = new QLabel(Interface);
-        credit->setObjectName("credit");
-        credit->setGeometry(QRect(30, 543, 31, 31));
-        credit->setStyleSheet(QString::fromUtf8("#credit {\n"
-"background-color: transparent;\n"
-"border-image: url(:folder_green.png);\n"
-"background: none;\n"
-"border: none;\n"
-"background-repeat: none;\n"
-"}"));
         search = new QLineEdit(Interface);
         search->setObjectName("search");
         search->setGeometry(QRect(380, 40, 311, 41));
@@ -669,6 +593,15 @@ public:
 "background-repeat: none;\n"
 "}"));
         favorite->setAutoDefault(true);
+        dropDown = new QComboBox(viewMail);
+        dropDown->setObjectName("dropDown");
+        dropDown->setGeometry(QRect(564, 66, 111, 25));
+        dropDown->setStyleSheet(QString::fromUtf8("#dropDown\n"
+"{\n"
+"	background-color:#868687;\n"
+"		border-radius: 10px;\n"
+"        color: #fff;\n"
+"}"));
         fromLabel->raise();
         fromText->raise();
         mailContent->raise();
@@ -680,6 +613,7 @@ public:
         scrollArea_2->raise();
         trashBtn->raise();
         favorite->raise();
+        dropDown->raise();
         settings = new QPushButton(Interface);
         settings->setObjectName("settings");
         settings->setGeometry(QRect(161, 93, 43, 40));
@@ -692,7 +626,123 @@ public:
 "background-repeat: none;\n"
 "}"));
         settings->setAutoDefault(true);
-        dockWidget->raise();
+        folderArea = new QScrollArea(Interface);
+        folderArea->setObjectName("folderArea");
+        folderArea->setGeometry(QRect(0, 420, 331, 141));
+        folderArea->setStyleSheet(QString::fromUtf8("#folderZone\n"
+"{\n"
+"	background-color:#242423;\n"
+"}"));
+        folderArea->setWidgetResizable(true);
+        folderZone = new QWidget();
+        folderZone->setObjectName("folderZone");
+        folderZone->setGeometry(QRect(0, 0, 329, 139));
+        folderArea->setWidget(folderZone);
+        addFolder = new QPushButton(Interface);
+        addFolder->setObjectName("addFolder");
+        addFolder->setGeometry(QRect(20, 570, 93, 29));
+        addFolder->setCursor(QCursor(Qt::PointingHandCursor));
+        addFolder->setStyleSheet(QString::fromUtf8("#addFolder\n"
+"{\n"
+"	    background-color: red;\n"
+"		border-radius: 10px;\n"
+"        color: #fff;\n"
+"}\n"
+"\n"
+"\n"
+"#addFolder:hover\n"
+"{\n"
+"	    background-color: #f72d2d;\n"
+"}"));
+        createFolderWindow = new QGroupBox(Interface);
+        createFolderWindow->setObjectName("createFolderWindow");
+        createFolderWindow->setGeometry(QRect(240, 170, 511, 361));
+        createFolderWindow->setStyleSheet(QString::fromUtf8("#createFolderWindow\n"
+"{\n"
+"	background-color: #242423;\n"
+"}"));
+        addLabel = new QLabel(createFolderWindow);
+        addLabel->setObjectName("addLabel");
+        addLabel->setGeometry(QRect(185, 52, 171, 31));
+        QFont font;
+        font.setPointSize(16);
+        font.setBold(true);
+        addLabel->setFont(font);
+        addLabel->setStyleSheet(QString::fromUtf8("#addLabel\n"
+"{\n"
+"	color: #fff;\n"
+"}"));
+        editName = new QLineEdit(createFolderWindow);
+        editName->setObjectName("editName");
+        editName->setGeometry(QRect(40, 150, 431, 41));
+        QFont font1;
+        font1.setPointSize(12);
+        editName->setFont(font1);
+        editName->setStyleSheet(QString::fromUtf8("#editName\n"
+"{\n"
+"color:white;\n"
+"padding-right: 40px;\n"
+"border: 2px solid white;\n"
+"border-radius:10px;\n"
+"background-color: rgba(0,0,0,0.3);\n"
+"}\n"
+"#editName:focus\n"
+"{\n"
+"border: 2px solid yellow;\n"
+"}"));
+        editName->setMaxLength(255);
+        addBtn = new QPushButton(createFolderWindow);
+        addBtn->setObjectName("addBtn");
+        addBtn->setGeometry(QRect(201, 280, 111, 41));
+        addBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        addBtn->setStyleSheet(QString::fromUtf8("#addBtn\n"
+"{\n"
+"	    background-color: red;\n"
+"		border-radius: 20px;\n"
+"        color: #fff;\n"
+"}\n"
+"\n"
+"\n"
+"#addBtn:hover\n"
+"{\n"
+"	    background-color: #f72d2d;\n"
+"}"));
+        exitBtn_2 = new QPushButton(createFolderWindow);
+        exitBtn_2->setObjectName("exitBtn_2");
+        exitBtn_2->setGeometry(QRect(470, 30, 20, 21));
+        exitBtn_2->setCursor(QCursor(Qt::PointingHandCursor));
+        exitBtn_2->setStyleSheet(QString::fromUtf8("#exitBtn_2 {\n"
+"background-color: transparent;\n"
+"border-image: url(:red_x.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        exitBtn_2->setAutoDefault(true);
+        find_2 = new QLabel(Interface);
+        find_2->setObjectName("find_2");
+        find_2->setGeometry(QRect(140, 572, 21, 21));
+        find_2->setStyleSheet(QString::fromUtf8("#find_2 {\n"
+"background-color: transparent;\n"
+"border-image: url(:search.png);\n"
+"background: none;\n"
+"border: none;\n"
+"background-repeat: none;\n"
+"}"));
+        search_2 = new QLineEdit(Interface);
+        search_2->setObjectName("search_2");
+        search_2->setGeometry(QRect(135, 570, 181, 31));
+        search_2->setStyleSheet(QString::fromUtf8("#search_2\n"
+"{\n"
+"    color:black;\n"
+"	border-radius:15px;\n"
+"	padding-left:30px;\n"
+"}\n"
+"\n"
+"#search_2:focus\n"
+"{\n"
+"border: 2px solid yellow;\n"
+"}"));
         area1->raise();
         pushButton->raise();
         Logo->raise();
@@ -707,12 +757,6 @@ public:
         line->raise();
         line_2->raise();
         line_3->raise();
-        pushButton_5->raise();
-        pushButton_6->raise();
-        pushButton_7->raise();
-        work->raise();
-        personal->raise();
-        credit->raise();
         search->raise();
         find->raise();
         sw->raise();
@@ -723,6 +767,12 @@ public:
         scrollArea->raise();
         viewMail->raise();
         settings->raise();
+        folderArea->raise();
+        addFolder->raise();
+        createFolderWindow->raise();
+        dockWidget->raise();
+        search_2->raise();
+        find_2->raise();
 
         retranslateUi(Interface);
         QObject::connect(compose, &QPushButton::clicked, dockWidget, qOverload<>(&QDockWidget::show));
@@ -733,6 +783,7 @@ public:
         trashBtn->setDefault(true);
         favorite->setDefault(true);
         settings->setDefault(true);
+        exitBtn_2->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(Interface);
@@ -752,12 +803,6 @@ public:
         star->setText(QString());
         sent->setText(QString());
         trash->setText(QString());
-        pushButton_5->setText(QCoreApplication::translate("Interface", "Work", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("Interface", "Personal", nullptr));
-        pushButton_7->setText(QCoreApplication::translate("Interface", "Credit", nullptr));
-        work->setText(QString());
-        personal->setText(QString());
-        credit->setText(QString());
         search->setPlaceholderText(QCoreApplication::translate("Interface", "Search...", nullptr));
         find->setText(QString());
         sw->setText(QString());
@@ -791,6 +836,14 @@ public:
         trashBtn->setText(QString());
         favorite->setText(QString());
         settings->setText(QString());
+        addFolder->setText(QCoreApplication::translate("Interface", "Add Folder", nullptr));
+        createFolderWindow->setTitle(QString());
+        addLabel->setText(QCoreApplication::translate("Interface", "Add Folder", nullptr));
+        editName->setPlaceholderText(QCoreApplication::translate("Interface", "Introduceti numele folderului", nullptr));
+        addBtn->setText(QCoreApplication::translate("Interface", "Add", nullptr));
+        exitBtn_2->setText(QString());
+        find_2->setText(QString());
+        search_2->setPlaceholderText(QCoreApplication::translate("Interface", "Search...", nullptr));
     } // retranslateUi
 
 };
