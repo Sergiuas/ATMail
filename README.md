@@ -1,3 +1,3 @@
 # ATMail
 
-To be modified...
+A modern email client
