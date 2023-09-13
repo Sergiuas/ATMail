@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsWindow</class>
+ <widget class="QDialog" name="SettingsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>435</width>
+    <height>616</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#SettingsWindow
+{
+	background: #242423;
+}</string>
+  </property>
+  <widget class="QLabel" name="settingsLabel">
+   <property name="geometry">
+    <rect>
+     <x>167</x>
+     <y>19</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#settingsLabel
+{
+color:#fff
+}</string>
+   </property>
+   <property name="text">
+    <string>Setări</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="editSurname">
+   <property name="geometry">
+    <rect>
+     <x>81</x>
+     <y>134</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#editSurname
+{
+color:white;
+padding-right: 40px;
+border: 2px solid white;
+border-radius:10px;
+background-color: rgba(0,0,0,0.7);
+}
+#editSurname:focus
+{
+border: 2px solid yellow;
+}</string>
+   </property>
+   <property name="maxLength">
+    <number>255</number>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti numele</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="surnameLabel">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>80</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#surnameLabel
+{
+color:#fff
+}</string>
+   </property>
+   <property name="text">
+    <string>Nume</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nameLabel">
+   <property name="geometry">
+    <rect>
+     <x>167</x>
+     <y>195</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#nameLabel
+{
+color:#fff
+}</string>
+   </property>
+   <property name="text">
+    <string>Prenume</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="editName">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>249</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#editName
+{
+color:white;
+padding-right: 40px;
+border: 2px solid white;
+border-radius:10px;
+background-color: rgba(0,0,0,0.7);
+}
+#editName:focus
+{
+border: 2px solid yellow;
+}</string>
+   </property>
+   <property name="maxLength">
+    <number>255</number>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti prenumele</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="oldPassLabel">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>305</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#oldPassLabel
+{
+color:#fff
+}</string>
+   </property>
+   <property name="text">
+    <string>Parola veche</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="editOldPass">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>359</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#editOldPass
+{
+color:white;
+padding-right: 40px;
+border: 2px solid white;
+border-radius:10px;
+background-color: rgba(0,0,0,0.7);
+}
+#editOldPass:focus
+{
+border: 2px solid yellow;
+}</string>
+   </property>
+   <property name="maxLength">
+    <number>255</number>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti vechea parola</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="editNewPass">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>463</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#editNewPass
+{
+color:white;
+padding-right: 40px;
+border: 2px solid white;
+border-radius:10px;
+background-color: rgba(0,0,0,0.7);
+}
+#editNewPass:focus
+{
+border: 2px solid yellow;
+}</string>
+   </property>
+   <property name="maxLength">
+    <number>255</number>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Introduceti noua parola</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="newPassLabel">
+   <property name="geometry">
+    <rect>
+     <x>152</x>
+     <y>409</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#newPassLabel
+{
+color:#fff
+}</string>
+   </property>
+   <property name="text">
+    <string>Parola noua</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="settings">
+   <property name="geometry">
+    <rect>
+     <x>-420</x>
+     <y>-200</y>
+     <width>721</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>BlankCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#settings {
+background-color: transparent;
+border-image: url(:gear_transparent.png);
+background: none;
+border: none;
+background-repeat: none;
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="settings_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>210</y>
+     <width>721</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>BlankCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#settings_2 {
+background-color: transparent;
+border-image: url(:gear_transparent.png);
+background: none;
+border: none;
+background-repeat: none;
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="visibilityOld">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>367</y>
+     <width>88</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#visibilityOld
+{
+background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+}
+
+QCheckBox::indicator:unchecked {
+    image: url(:showWhite.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:hideWhite.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="visibilityNew">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>471</y>
+     <width>88</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#visibilityNew
+{
+background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+}
+
+QCheckBox::indicator:unchecked {
+    image: url(:showWhite.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:hideWhite.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>550</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#save
+{
+	    background-color: red;
+		border-radius: 19px;
+        color: #fff;
+}
+
+
+#save:hover
+{
+	    background-color: #f72d2d;
+}</string>
+   </property>
+   <property name="text">
+    <string>Salvați</string>
+   </property>
+  </widget>
+  <zorder>settings</zorder>
+  <zorder>settings_2</zorder>
+  <zorder>settingsLabel</zorder>
+  <zorder>editSurname</zorder>
+  <zorder>surnameLabel</zorder>
+  <zorder>nameLabel</zorder>
+  <zorder>editName</zorder>
+  <zorder>oldPassLabel</zorder>
+  <zorder>editOldPass</zorder>
+  <zorder>editNewPass</zorder>
+  <zorder>newPassLabel</zorder>
+  <zorder>visibilityOld</zorder>
+  <zorder>visibilityNew</zorder>
+  <zorder>save</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
